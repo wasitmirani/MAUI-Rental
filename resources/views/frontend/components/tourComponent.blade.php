@@ -51,7 +51,7 @@
                     <div class="container">
                         <div class="row">
                         @foreach($tours as $tour)
-                            <div class="col-lg-3">
+                            <div class="col-lg-3"   style="padding-top: 10px;">
                                 <div class="img-box">
                                     <img src="{{asset('frontend/assets/images/travel-3.jpg')}}" class="img-fluid" alt="">
                                     <h3>{{$tour->name}}</h3>

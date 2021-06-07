@@ -6,7 +6,7 @@
         </div>
         <div class="row">
         @foreach($packages as $package)
-            <div class="col-lg-4">
+            <div class="col-lg-4"  style="padding-top: 10px;">
                 <div class="box">
                     <div class="img-box"><img src="{{asset('frontend/assets/images/tour-1.jpg')}}" class="img-fluid" alt=""><h3>{{$package->name}}</h3></div>
                     <ul class="list-unstyled">
@@ -15,7 +15,7 @@
                         <li class="list-inline-item"><i class="fas fa-comment-dots"></i>12700</li>
                     </ul>
                     <div class="content">
-                        <p><strong>$600</strong>7 days 6 nights</p>
+                        <p><strong>$ {{$package->price}}</strong>7 days 6 nights</p>
                         <p class="para-one">{{$package->description}}.</p>
                         <a href="#" class="btn btn-business">BOOK Now <NOW></NOW> <i class="fas fa-arrow-right ml-3"></i></a>
                     </div>

@@ -10,6 +10,6 @@ class Package extends Model
     use HasFactory;
 
     public function tourPackages(){
-        return  $this->belongsTo(TourPackage::class, 'package_id', 'id');
+        return  $this->belongsTo(TourPackage::class);
     }
 }
