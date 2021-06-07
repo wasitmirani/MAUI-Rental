@@ -11,16 +11,20 @@
                             We look forward to hearing from you.</p>
                         </div>
                     </div>
-                    <form>
+                    <form action="{{route('send.message')}}" method="post">
+                    {{ csrf_field() }}
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" class="form-control" placeholder="Name">
+                                <input type="text" name="name" class="form-control" placeholder="Name">
                             </div>
                             <div class="col-lg-6">
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input type="text" name="phone" class="form-control" placeholder="Phone">
                             </div>
                             <div class="col-lg-12">
-                                <textarea name="" id="" class="form-control" cols="" rows="" placeholder="Messages"></textarea>
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-lg-12">
+                                <textarea name="message" id="" class="form-control" cols="" rows="" placeholder="Messages"></textarea>
                             </div>
                             <div class="col-lg-12 text-center">
                                 <button type="submit" class="btn btn-business">Submit Now <i class="fas fa-arrow-right ml-3"></i></button>

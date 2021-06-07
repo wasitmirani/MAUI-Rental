@@ -11,11 +11,11 @@
                     <div class="col-lg-6">
                         <h2>Quick Links</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Packages </a></li>
+                            <li><a href="{{route('index')}}">Home</a></li>
+                            <li><a href="{{route('about')}}">About Us</a></li>
+                            <li><a href="{{route('packages')}}">Packages </a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{{route('contactus')}}">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-6">

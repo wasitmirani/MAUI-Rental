@@ -26,6 +26,9 @@
                         <li class="list-inline-item">
                             <div class="location"><select id="disabledSelect" class="form-select " placeholder="Your Destination">
                                 <option>Disabled select</option>
+                                @foreach($locations as $location)
+                                <option value="{{$location->id}}">{{$location->name}}</option>
+                                @endforeach
                             </select></div>
                         </li>
                         <li class="list-inline-item">
@@ -89,7 +92,7 @@
 
             @endcomponent
             <!-- Packages -->
-            @component('frontend.components.packagesComponent')
+            @component('frontend.components.packagesComponent',['packages'=>$packages])
 
             @endcomponent
             <!-- Packages -->

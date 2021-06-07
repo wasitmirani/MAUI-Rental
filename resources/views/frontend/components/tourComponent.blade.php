@@ -2,7 +2,7 @@
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <!--<div class="col-lg-4">
                     <a class="card" href="#!">
                         <div class="front" style="background-image: url(frontend/assets/images/travel-1.jpg)">
                             <h3>New York Tou</h3>
@@ -46,20 +46,23 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="flip-in">
                     <div class="container">
                         <div class="row">
+                        @foreach($tours as $tour)
                             <div class="col-lg-3">
                                 <div class="img-box">
                                     <img src="{{asset('frontend/assets/images/travel-3.jpg')}}" class="img-fluid" alt="">
-                                    <h3>Manchester Tour</h3>
+                                    <h3>{{$tour->name}}</h3>
                                     <div class="overlay">
                                         <a href="#" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                        @endforeach
+
+                           <!--<div class="col-lg-3">
                                 <div class="img-box">
                                     <img src="{{asset('frontend/assets/images/travel-4.jpg')}}" class="img-fluid" alt="">
                                     <h3>Norwich Tour</h3>
@@ -67,8 +70,8 @@
                                         <a href="#" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
+                            </div>-->
+                           <!-- <div class="col-lg-3">
                                 <div class="img-box">
                                     <img src="{{asset('frontend/assets/images/travel-5.jpg')}}" class="img-fluid" alt="">
                                     <h3>Armania Tour</h3>
@@ -76,8 +79,8 @@
                                         <a href="#" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-3">
+                            </div>-->
+                            <!--<div class="col-lg-3">
                                 <div class="img-box">
                                     <img src="{{asset('frontend/assets/images/travel-6.jpg')}}" class="img-fluid" alt="">
                                     <h3>Armania Tour</h3>
@@ -85,10 +88,12 @@
                                         <a href="#" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
                         </div>
+             
                     </div>
+             
                 </div>
             </section>
 

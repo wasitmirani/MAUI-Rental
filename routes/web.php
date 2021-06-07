@@ -25,6 +25,7 @@ Route::get('/',[FrontEndController::class,'index'])->name('index');
 Route::get('/about-us',[FrontEndController::class,'aboutUs'])->name('about');
 Route::get('/packages',[FrontEndController::class,'packages'])->name('packages');
 Route::get('/contactus',[FrontEndController::class,'contactus'])->name('contactus');
+Route::post('/contactus',[FrontEndController::class,'sendMessage'])->name('send.message');
 Auth::routes();
 
 

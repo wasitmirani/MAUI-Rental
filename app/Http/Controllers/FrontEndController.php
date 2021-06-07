@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tour;
+use App\Models\Contact;
+use App\Models\Package;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -16,7 +19,10 @@ class FrontEndController extends Controller
     {
         //
         $tours=Tour::latest()->with('tourDetails')->take(10)->get();
-        return view('frontend.pages.index',compact('tours'));
+        $packages=Package::latest()->with('tourPackages')->take(10)->get();
+        $locations  = Location::all();
+     
+        return view('frontend.pages.index',compact('tours','packages', 'locations'));
     }
 
     public function aboutUs(){
@@ -24,11 +30,26 @@ class FrontEndController extends Controller
         return view('frontend.pages.aboutus');
     }
     public function packages(){
+
         return view("frontend.pages.packages");
     }
 
     public function contactus(){
         return view("frontend.pages.contactus");
+    }
+
+    public function sendMessage(Request $request){
+
+       $message = Contact::create([
+           'name' =>  $request->name,
+           'email' =>  $request->email,
+           'phone' =>  $request->phone,
+           'message' =>  $request->message,
+       ]);
+       if($message){
+           return redirect()->back();
+       }
+
     }
     /**
      * Show the form for creating a new resource.
