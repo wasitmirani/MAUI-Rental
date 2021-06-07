@@ -54,8 +54,6 @@
             </div>
    -->     
    </div>
-        <div class="row text-center">
-            <a href="{{route('all.packages')}}" class="btn btn-business">Discover MORE <NOW></NOW> <i class="fas fa-arrow-right ml-3"></i></a>
-        </div>
+       
     </div>
 </section>

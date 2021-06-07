@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\TourPackageController;
+use App\Http\Controllers\TourController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PackageController;
@@ -24,8 +26,11 @@ use App\Http\Controllers\Backend\PackageController;
 Route::get('/',[FrontEndController::class,'index'])->name('index');
 Route::get('/about-us',[FrontEndController::class,'aboutUs'])->name('about');
 Route::get('/packages',[FrontEndController::class,'packages'])->name('packages');
+
 Route::get('/contactus',[FrontEndController::class,'contactus'])->name('contactus');
 Route::post('/contactus',[FrontEndController::class,'sendMessage'])->name('send.message');
+Route::get('/all/packages',[TourPackageController::class,'index'])->name('all.packages');
+Route::get('/all/tours',[TourController::class,'index'])->name('all.tours');
 Auth::routes();
 
 

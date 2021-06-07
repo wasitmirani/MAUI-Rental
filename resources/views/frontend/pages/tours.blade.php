@@ -13,7 +13,7 @@
 		</section>
 		<!-- Banner -->
 
-        @component('frontend.components.toursComponent')
+        @component('frontend.components.allTours',['tours'=>$tours])
 
         @endcomponent
 @endsection

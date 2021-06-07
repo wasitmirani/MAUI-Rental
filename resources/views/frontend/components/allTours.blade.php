@@ -93,9 +93,7 @@
                         </div>
              
                     </div>
-                    <div class="row text-center" style="width: 198px; padding-top: 28px;">
-            <a href="{{route('all.tours')}}" class="btn btn-business">Discover MORE <NOW></NOW> <i class="fas fa-arrow-right ml-3"></i></a>
-        </div>
+            
                 </div>
             </section>
 

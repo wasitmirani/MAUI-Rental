@@ -19,7 +19,7 @@ class FrontEndController extends Controller
     {
         //
         $tours=Tour::latest()->with('tourDetails')->take(10)->get();
-        $packages=Package::join('tour_packages','tour_packages.package_id','=','packages.id')->select('tour_packages.price','packages.*')->latest()->with('tourPackages')->take(10)->get();
+        $packages=Package::join('tour_packages','tour_packages.package_id','=','packages.id')->select('tour_packages.price','packages.*')->latest()->with('tourPackages')->take(6)->get();
         $locations  = Location::all();
      
         return view('frontend.pages.index',compact('tours','packages', 'locations'));

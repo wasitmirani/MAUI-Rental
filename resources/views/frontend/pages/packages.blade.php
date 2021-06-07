@@ -15,7 +15,7 @@
 		</section>
 		<!-- Banner -->
 
-        @component('frontend.components.packagesComponent')
+		@component('frontend.components.allPackages',['packages'=>$packages])
 
         @endcomponent
 @endsection
