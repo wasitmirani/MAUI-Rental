@@ -15,8 +15,8 @@ class FrontEndController extends Controller
     public function index()
     {
         //
-        $tours=Tour::latest()->with('tour_details')->take(10)->get();
-        return view('frontend.pages.index');
+        $tours=Tour::latest()->with('tourDetails')->take(10)->get();
+        return view('frontend.pages.index',compact('tours'));
     }
 
     public function aboutUs(){
