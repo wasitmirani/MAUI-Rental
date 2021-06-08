@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="{{asset('frontend/assets/css/fancybox.css')}}">
 		<link rel="stylesheet" href="{{asset('frontend/assets/css/slick.min.css')}}">
 		<link rel="stylesheet" href="{{asset('frontend/assets/css/slick-theme.css')}}">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
 		<link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
 		<title>{{config('app.name')}}</title>
 	</head>
@@ -32,9 +33,34 @@
 							<li class="list-inline-item"><a href="{{route('packages')}}" >Packages</a></li>
 							<li class="list-inline-item"><a href="#" >Blog</a></li>
 							<li class="list-inline-item"><a href="{{route('contactus')}}" > Contact Us</a></li>
+                                  <!-- Authentication Links -->
+                        @guest
+                        @if (Route::has('login'))
+                        <li class="list-inline-item"><a href="{{route('login')}}" ><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                        @endif
+
+                        @if (Route::has('register'))
 							<li class="list-inline-item"><a href="{{route('register')}}" ><i class="fas fa-user mr-2"></i>Register</a></li>
-							<li class="list-inline-item"><a href="{{route('login')}}" ><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                            @endif
+                            @else
+                            <li class="list-inline-item">
+                                <a   href="{{ route('logout') }}" role="button" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();" >
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+
+
+                            </li>
+                            <li class="list-inline-item">
+                                <a   href="{{ route('member.dashboard') }}" role="button"  >{{Auth::user()->name}}</a>
+                            </li>
+                        @endguest
 							<li class="list-inline-item"><a href="#" ><img src="{{asset('/frontend/assets/images/flag.png')}}" class="mr-2" alt="">EN</a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -59,6 +85,7 @@
 					<script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
 					<script src="{{asset('frontend/assets/js/slick.min.js')}}"></script>
 					<script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+                    <script src="{{asset('css/app.css')}}"></script>
 					<script>
 					AOS.init();
 					</script>

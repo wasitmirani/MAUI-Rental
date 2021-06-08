@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Package;
 use App\Models\Location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class FrontEndController extends Controller
 {
@@ -21,7 +22,7 @@ class FrontEndController extends Controller
         $tours=Tour::latest()->with('tourDetails')->take(10)->get();
         $packages=Package::join('tour_packages','tour_packages.package_id','=','packages.id')->select('tour_packages.price','packages.*')->latest()->with('tourPackages')->take(6)->get();
         $locations  = Location::all();
-     
+
         return view('frontend.pages.index',compact('tours','packages', 'locations'));
     }
 
@@ -39,6 +40,24 @@ class FrontEndController extends Controller
     }
 
     public function sendMessage(Request $request){
+     /*   $data = [];
+        $data['name']  = $request->name;
+        $data['email'] =  $request->email;
+        $data['phone'] =  $request->phone;
+        $data['message'] =  $request->message;
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required'],
+            'message' => ['required'],
+
+        ]);*/
+        $this->validate($request, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email'],
+            'phone' => ['required'],
+            'message' => ['required'],
+    ]);
 
        $message = Contact::create([
            'name' =>  $request->name,
@@ -104,6 +123,11 @@ class FrontEndController extends Controller
     public function update(Request $request, $id)
     {
         //
+    }
+
+    public function searchPlaces(Request $request){
+
+
     }
 
     /**

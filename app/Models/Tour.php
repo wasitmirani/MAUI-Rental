@@ -14,8 +14,8 @@ class Tour extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-
-    public function tourDetails(){
+public function tourDetails(){
         return  $this->belongsTo(User::class, 'tour_id', 'id');
     }
+
 }

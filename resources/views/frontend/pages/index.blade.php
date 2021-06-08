@@ -22,9 +22,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Find a place</h3>
+                    <form action="{{route('search.place')}}" method="POST">
+                        @csrf
                     <ul class="list-unstyled">
                         <li class="list-inline-item">
-                            <div class="location"><select id="disabledSelect" class="form-select " placeholder="Your Destination">
+                            <div class="location"><select id="disabledSelect" name="location" class="form-select " placeholder="Your Destination">
                                 <option>Disabled select</option>
                                 @foreach($locations as $location)
                                 <option value="{{$location->id}}">{{$location->name}}</option>
@@ -69,9 +71,10 @@
                             <div class="time"><input type="text" class="" placeholder="Total Duration"></div>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="btn"><i class="fas fa-search"></i> Check Availability</a>
+                            <button type="submit" class="btn"><i class="fas fa-search"></i> Check Availability</button>
                         </li>
                     </ul>
+                </form>
                 </div>
             </div>
         </div>

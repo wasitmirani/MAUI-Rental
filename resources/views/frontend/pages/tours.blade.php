@@ -15,5 +15,6 @@
 
         @component('frontend.components.allTours',['tours'=>$tours])
 
+
         @endcomponent
 @endsection

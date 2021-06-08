@@ -11,6 +11,16 @@
                             We look forward to hearing from you.</p>
                         </div>
                     </div>
+                    @if(count($errors->all()) > 0)
+    <div class="alert alert-danger" role="alert">
+        <p><b>Required Fields Missing!</b></p>
+        <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+@endif
                     <form action="{{route('send.message')}}" method="post">
                     {{ csrf_field() }}
                         <div class="row">

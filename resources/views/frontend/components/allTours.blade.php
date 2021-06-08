@@ -62,6 +62,7 @@
                             </div>
                         @endforeach
 
+
                            <!--<div class="col-lg-3">
                                 <div class="img-box">
                                     <img src="{{asset('frontend/assets/images/travel-4.jpg')}}" class="img-fluid" alt="">
@@ -91,10 +92,11 @@
                             </div>-->
 
                         </div>
-             
-                    </div>
-            
-                </div>
-            </section>
 
-        
+                    </div>
+
+                </div>
+
+            </section>
+            {{$tours->links()}}
+

@@ -38,9 +38,15 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+Route::post('/search/places',[FrontEndController::class,'searchPlaces'])->name('search.place');
 
 
 
-Route::prefix('member')->name('member')->group(function () {
-        Route::get('/dashboard',[MemberController::class,'index']);
+Route::prefix('member')->name('member.')->group(function () {
+        Route::get('/dashboard',[MemberController::class,'index'])->name('dashboard');
+        Route::get('/tours',[MemberController::class,'getTours'])->name('tours');
+        Route::get('/upcoming/tours',[MemberController::class,'upcomingTours'])->name('upcoming.tours');
+        Route::get('/profile',[MemberController::class,'profile'])->name('profile');
+        Route::post('/update/profile',[MemberController::class,'updateProfile'])->name('update.profile');
+
 });

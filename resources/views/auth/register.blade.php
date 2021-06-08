@@ -19,30 +19,47 @@
                 </div>
                 <div class="col-lg-5 dis-flex">
                     <form action="{{route('register')}}" method="POST">
+                    @csrf
                         <div class="row">
                             <div class="col-12">
                                 <label for="first-name">
                                 First Name</label>
-                                <input type="text" class="form-control" placeholder="First Name">
-
+                                <input type="text" name="name" class="form-control" placeholder="First Name">
+                                @error('name')
+                                    <span class="text-danger" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-12">
                                 <label for="first-name">
                                 Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address">
-
+                                <input type="email" name="email" class="form-control" placeholder="Email Address">
+                                @error('email')
+                                    <span class="text-danger" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-12">
                                 <label for="first-name">
                                 Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number">
-
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                                @error('phone')
+                                    <span class="text-danger" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-12">
                                 <label for="first-name">
                                 Password</label>
-                                <input type="password" class="form-control" placeholder="Password">
-
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                @error('password')
+                                    <span class="text-danger" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-12">
                                 <label for="password"
@@ -59,7 +76,7 @@
                                     </svg>
                                 </label>
 
-                                <input type="text" id="password" placeholder=" " autocomplete="off" autocapitalize="off" autocorrect="off" required pattern=".{6,}" class="ControlInput ControlInput--password form-control" placeholder="Confirm Password">
+                                <input type="text" name="password_confirmation" id="password" placeholder=" " autocomplete="off" autocapitalize="off" autocorrect="off" required pattern=".{6,}" class="ControlInput ControlInput--password form-control" placeholder="Confirm Password">
 
                             </div>
                             <div class="col-12">
