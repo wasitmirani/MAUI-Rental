@@ -39,7 +39,17 @@
                 <div class="form-group">
                     <label>Upload Picture</label>
                     <input type="file" name="image" class="form-control input-default " placeholder="input-default" >
+
                 </div>
+                @if(Auth::user()->image != null)
+                <div class="form-group">
+                    <label>Existing Image</label>
+
+                    <img src="{{asset('admin/img/users/')}}{{'/'}}{{Auth::user()->image}}" width="50px" alt="">
+
+
+                </div>
+                @endif
                 <div class="form-group">
 
                     <button type="submit" class="btn btn-primary">Update</button>
