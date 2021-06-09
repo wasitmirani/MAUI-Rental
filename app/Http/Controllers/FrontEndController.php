@@ -133,6 +133,8 @@ class FrontEndController extends Controller
 
     public function searchPlaces(Request $request){
 
+        return view('frontend.pages.search');
+
 
     }
 
