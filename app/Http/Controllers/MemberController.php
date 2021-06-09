@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Tour;
 use App\Models\User;
 use App\Models\BookingTour;
 use Illuminate\Support\Str;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,11 +16,16 @@ class MemberController extends Controller
     //
 
     public function index(){
+        $id = Auth::user()->id;
+        $now = Carbon::now();
 
+        $totalBookings = BookingTour::where('user_id',$id)->count();
         $totalTours = Tour::count();
+      //  $upcoming = BookingTour::whereBetween('start_booking_date',[$now, ])
 
 
-        return view('member.pages.index',compact('totalTours'));
+
+        return view('member.pages.index',compact('totalBookings','totalTours'));
     }
 
     public function getTours(){

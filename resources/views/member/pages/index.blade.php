@@ -75,7 +75,7 @@
                             <img src="images/card/card4.png" alt="">
                             <div class="card-info text-white">
                                 <p class="mb-1">Total Tours</p>
-                                <!--<h2 class="fs-36 text-white mb-4">$340</h2>-->
+                                <h2 class="fs-36 text-white mb-4">{{$totalTours}}</h2>
                                 <div class="d-flex align-items-center justify-content-between mb-5">
 
                                    <!-- <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
@@ -98,8 +98,8 @@
                         <div class="card-bx mb-0">
                             <img src="images/card/card1.png" alt="">
                             <div class="card-info text-white">
-                                <p class="mb-1">Total Bookings</p>
-                               <!-- <h2 class="fs-36 text-white mb-4">$340</h2>-->
+                                <p class="mb-1">Your Bookings</p>
+                                <h2 class="fs-36 text-white mb-4">{{$totalBookings}}</h2>
                                 <div class="d-flex align-items-center justify-content-between mb-5">
 
                                    <!-- <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
