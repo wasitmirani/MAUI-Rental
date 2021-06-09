@@ -27,9 +27,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::prefix('user')->group(function () {
         Route::get('/users',[UserController::class,"getUsers"]);
     });
-    Route::prefix('tour')->group(function () {
-        Route::get('/tours',[TourController::class,"getTours"]);
-    });
+
     Route::prefix('package')->group(function () {
         Route::get('/packages',[PackageController::class,"getPackages"]);
         Route::post('/store',[PackageController::class,'store']);

@@ -46,14 +46,14 @@
                                 <p class="mb-1">Purple Card</p>
                                 <h2 class="fs-36 text-white mb-4">$45,662</h2>
                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
+
                                     <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
                                 </div>
                                 <div class="d-flex">
-                                    <div class="mr-5">
+                                  <!--  <div class="mr-5">
                                         <p class="fs-14 mb-1 op6">VALID THRU</p>
                                         <span>08/21</span>
-                                    </div>
+                                    </div>-->
                                     <div>
                                         <p class="fs-14 mb-1 op6">CARD HOLDER</p>
                                         <span>Franklin Jr.</span>
@@ -61,14 +61,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div></div><div class="owl-item cloned" style="width: 472.667px; margin-right: 30px;"><div class="items">
+                    </div>
+                </div>
+                <div class="owl-item cloned" style="width: 472.667px; margin-right: 49px;"><div class="items">
                         <div class="card-bx mb-0">
                             <img src="images/card/card3.png" alt="">
                             <div class="card-info text-white">
                                 <p class="mb-1">Green Card</p>
                                 <h2 class="fs-36 text-white mb-4">$23,511</h2>
                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
+
                                     <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
                                 </div>
                                 <div class="d-flex">
@@ -83,178 +85,78 @@
                                 </div>
                             </div>
                         </div>
-                    </div></div><div class="owl-item cloned active" style="width: 472.667px; margin-right: 30px;"><div class="items">
+                    </div>
+                </div>
+                <div class="owl-item cloned active" style="width: 413.667px; margin-right: 30px;"><div class="items">
                         <div class="card-bx mb-0">
                             <img src="images/card/card4.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Total Bookings</p>
-                                <h2 class="fs-36 text-white mb-4">$340</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div></div><div class="owl-item active center" style="width: 472.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card1.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Upcoming Tours</p>
-                                <h2 class="fs-36 text-white mb-4">$673,412.66</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div></div><div class="owl-item active" style="width: 472.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card2.png" alt="">
                             <div class="card-info text-white">
                                 <p class="mb-1">Total Tours</p>
-                                <h2 class="fs-36 text-white mb-4">$45,662</h2>
+                                <!--<h2 class="fs-36 text-white mb-4">$340</h2>-->
                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
+
+                                   <!-- <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
                                 </div>
                                 <div class="d-flex">
-                                    <div class="mr-5">
+                                   <!-- <div class="mr-5">
                                         <p class="fs-14 mb-1 op6">VALID THRU</p>
                                         <span>08/21</span>
-                                    </div>
+                                    </div>-->
                                     <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
+                                       <!-- <p class="fs-14 mb-1 op6">CARD HOLDER</p>
+                                        <span>Franklin Jr.</span>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div></div><div class="owl-item" style="width: 472.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card3.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Green Card</p>
-                                <h2 class="fs-36 text-white mb-4">$23,511</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div></div><div class="owl-item" style="width: 472.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card4.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Orange Card</p>
-                                <h2 class="fs-36 text-white mb-4">$340</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div></div><div class="owl-item cloned" style="width: 472.667px; margin-right: 30px;"><div class="items">
+                    </div>
+                </div>
+                <div class="owl-item active center" style="width: 413.667px; margin-right: 30px;"><div class="items">
                         <div class="card-bx mb-0">
                             <img src="images/card/card1.png" alt="">
                             <div class="card-info text-white">
-                                <p class="mb-1">Main Balance</p>
-                                <h2 class="fs-36 text-white mb-4">$673,412.66</h2>
+                                <p class="mb-1">Total Bookings</p>
+                               <!-- <h2 class="fs-36 text-white mb-4">$340</h2>-->
                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
+
+                                   <!-- <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
                                 </div>
                                 <div class="d-flex">
-                                    <div class="mr-5">
+                                   <!-- <div class="mr-5">
                                         <p class="fs-14 mb-1 op6">VALID THRU</p>
                                         <span>08/21</span>
-                                    </div>
+                                    </div>-->
                                     <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
+                                       <!-- <p class="fs-14 mb-1 op6">CARD HOLDER</p>
+                                        <span>Franklin Jr.</span>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div></div><div class="owl-item cloned" style="width: 472.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card2.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Purple Card</p>
-                                <h2 class="fs-36 text-white mb-4">$45,662</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div></div><div class="owl-item cloned" style="width: 472.667px; margin-right: 30px;"><div class="items">
+                    </div>
+                </div>
+
+
+
+
+                <div class="owl-item cloned" style="width: 413.667px; margin-right: 30px;"><div class="items">
                         <div class="card-bx mb-0">
                             <img src="images/card/card3.png" alt="">
                             <div class="card-info text-white">
-                                <p class="mb-1">Green Card</p>
-                                <h2 class="fs-36 text-white mb-4">$23,511</h2>
+                                <p class="mb-1">Total Packages</p>
+                                <!--<h2 class="fs-36 text-white mb-4">$23,511</h2>-->
                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                    <img src="images/dual-dot.png" alt="" class="dot-img">
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
+                                    <!--<img src="images/dual-dot.png" alt="" class="dot-img">
+                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
                                 </div>
                                 <div class="d-flex">
                                     <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
+                                        <!--<p class="fs-14 mb-1 op6">VALID THRU</p>
+                                        <span>08/21</span>-->
                                     </div>
                                     <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
+                                        <!--<p class="fs-14 mb-1 op6">CARD HOLDER</p>
+                                        <span>Franklin Jr.</span>-->
                                     </div>
                                 </div>
                             </div>
@@ -267,39 +169,30 @@
                         <div class="card">
                             <div class="card-header d-sm-flex d-block border-0 pb-0">
                                 <div>
-                                    <h4 class="fs-20 text-black">Card List</h4>
-                                    <span class="fs-12">Lorem ipsum dolor sit amet, consectetur</span>
+                                    <h4 class="fs-20 text-black">Upcomimg Tours</h4>
+
                                 </div>
-                                <div class="dropdown custom-dropdown mb-0 mt-3 mt-sm-0">
-                                    <div class="btn btn-light btn-rounded" role="button" data-toggle="dropdown" aria-expanded="false">
-                                        Newest
-                                        <i class="fa fa-caret-down text-primary ml-3" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(138px, 56px, 0px);">
-                                        <a class="dropdown-item" href="javascript:void(0);">Details</a>
-                                        <a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="card-body pb-0">
                                 <div class="d-flex mb-3 border-bottom justify-content-between flex-wrap align-items-center">
                                     <div class="d-flex pb-3 align-items-center">
                                         <img src="images/card/1.jpg" alt="" class="rounded mr-3" width="130">
                                         <div class="mr-3">
-                                            <p class="fs-14 mb-1">Card Type</p>
-                                            <span class="text-black font-w500">Primary</span>
+                                            <p class="fs-14 mb-1">Tour Package</p>
+                                            <span class="text-black font-w500">Prime</span>
                                         </div>
                                     </div>
                                     <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Bank</p>
-                                        <span class="text-black font-w500">ABC Bank</span>
+                                        <p class="fs-14 mb-1">Price</p>
+                                        <span class="text-black font-w500">2256</span>
                                     </div>
                                     <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Card Number</p>
-                                        <span class="text-black font-w500">**** **** **** 2256</span>
+                                        <p class="fs-14 mb-1">Total Tours</p>
+                                        <span class="text-black font-w500">2256</span>
                                     </div>
                                     <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Namein Card</p>
+                                        <p class="fs-14 mb-1">Package Name</p>
                                         <span class="text-black font-w500">Franklin Jr.</span>
                                     </div>
                                     <a href="transactions-details.html" class="fs-14 btn-link mr-3 pb-3">See Number</a>
@@ -317,111 +210,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3 border-bottom justify-content-between flex-wrap align-items-center">
-                                    <div class="d-flex pb-3 align-items-center">
-                                        <img src="images/card/2.jpg" alt="" class="rounded mr-3" width="130">
-                                        <div class="mr-3">
-                                            <p class="fs-14 mb-1">Card Type</p>
-                                            <span class="text-black font-w500">Secondary</span>
-                                        </div>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Bank</p>
-                                        <span class="text-black font-w500">Finefine Bank</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Card Number</p>
-                                        <span class="text-black font-w500">**** **** **** 6551 </span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Namein Card</p>
-                                        <span class="text-black font-w500">Franklin Jr.</span>
-                                    </div>
-                                    <a href="transactions-details.html" class="fs-14 btn-link mr-3 pb-3">See Number</a>
-                                    <div class="dropdown pb-3">
-                                        <div class="btn-link" role="button" data-toggle="dropdown" aria-expanded="false">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 11.9999C10 13.1045 10.8954 13.9999 12 13.9999C13.1046 13.9999 14 13.1045 14 11.9999C14 10.8954 13.1046 9.99994 12 9.99994C10.8954 9.99994 10 10.8954 10 11.9999Z" fill="black"></path>
-                                                <path d="M10 4.00006C10 5.10463 10.8954 6.00006 12 6.00006C13.1046 6.00006 14 5.10463 14 4.00006C14 2.89549 13.1046 2.00006 12 2.00006C10.8954 2.00006 10 2.89549 10 4.00006Z" fill="black"></path>
-                                                <path d="M10 20C10 21.1046 10.8954 22 12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20Z" fill="black"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="javascript:void()">Delete</a>
-                                            <a class="dropdown-item" href="javascript:void()">Edit</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3 border-bottom justify-content-between flex-wrap align-items-center">
-                                    <div class="d-flex pb-3 align-items-center">
-                                        <img src="images/card/3.jpg" alt="" class="rounded mr-3" width="130">
-                                        <div class="mr-3">
-                                            <p class="fs-14 mb-1">Card Type</p>
-                                            <span class="text-black font-w500">Secondary</span>
-                                        </div>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Bank</p>
-                                        <span class="text-black font-w500">Makan Bank</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Card Number</p>
-                                        <span class="text-black font-w500">**** **** **** 6783</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Namein Card</p>
-                                        <span class="text-black font-w500">Franklin Jr.</span>
-                                    </div>
-                                    <a href="transactions-details.html" class="fs-14 btn-link mr-3 pb-3">See Number</a>
-                                    <div class="dropdown pb-3">
-                                        <div class="btn-link" role="button" data-toggle="dropdown" aria-expanded="false">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 11.9999C10 13.1045 10.8954 13.9999 12 13.9999C13.1046 13.9999 14 13.1045 14 11.9999C14 10.8954 13.1046 9.99994 12 9.99994C10.8954 9.99994 10 10.8954 10 11.9999Z" fill="black"></path>
-                                                <path d="M10 4.00006C10 5.10463 10.8954 6.00006 12 6.00006C13.1046 6.00006 14 5.10463 14 4.00006C14 2.89549 13.1046 2.00006 12 2.00006C10.8954 2.00006 10 2.89549 10 4.00006Z" fill="black"></path>
-                                                <path d="M10 20C10 21.1046 10.8954 22 12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20Z" fill="black"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="javascript:void()">Delete</a>
-                                            <a class="dropdown-item" href="javascript:void()">Edit</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex border-bottom justify-content-between flex-wrap align-items-center">
-                                    <div class="d-flex pb-3 align-items-center">
-                                        <img src="images/card/4.jpg" alt="" class="rounded mr-3" width="130">
-                                        <div class="mr-3">
-                                            <p class="fs-14 mb-1">Card Type</p>
-                                            <span class="text-black font-w500">Secondary</span>
-                                        </div>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Bank</p>
-                                        <span class="text-black font-w500">Where Bank</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Card Number</p>
-                                        <span class="text-black font-w500">**** **** **** 8843</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Namein Card</p>
-                                        <span class="text-black font-w500">Franklin Jr.</span>
-                                    </div>
-                                    <a href="transactions-details.html" class="fs-14 btn-link mr-3 pb-3">See Number</a>
-                                    <div class="dropdown pb-3">
-                                        <div class="btn-link" role="button" data-toggle="dropdown" aria-expanded="false">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 11.9999C10 13.1045 10.8954 13.9999 12 13.9999C13.1046 13.9999 14 13.1045 14 11.9999C14 10.8954 13.1046 9.99994 12 9.99994C10.8954 9.99994 10 10.8954 10 11.9999Z" fill="black"></path>
-                                                <path d="M10 4.00006C10 5.10463 10.8954 6.00006 12 6.00006C13.1046 6.00006 14 5.10463 14 4.00006C14 2.89549 13.1046 2.00006 12 2.00006C10.8954 2.00006 10 2.89549 10 4.00006Z" fill="black"></path>
-                                                <path d="M10 20C10 21.1046 10.8954 22 12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20Z" fill="black"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="javascript:void()">Delete</a>
-                                            <a class="dropdown-item" href="javascript:void()">Edit</a>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -434,7 +223,7 @@
                             <div class="card-header border-0 pb-0">
                                 <div>
                                     <h4 class="fs-20 text-black">Card Statistic</h4>
-                                    <span class="fs-12">Lorem ipsum dolor sit amet, consectetur</span>
+
                                 </div>
                             </div>
                             <div class="card-body">

@@ -11,7 +11,9 @@
                     <span class="nav-text">My Bookings</span>
                 </a>
                 <ul aria-expanded="false">
+                    <li><a href="{{route('member.bookings')}}">Bookings</a></li>
                     <li><a href="{{route('member.tours')}}">Tours</a></li>
+
                     <li><a href="{{route('member.upcoming.tours')}}">Upcomming Tours</a></li>
 
                  <!--   <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
@@ -41,9 +43,8 @@
                 <span class="nav-text">Setting</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="app-profile.html">Tours</a></li>
-                <li><a  href="">Email</a></li>
-                <li><a href="{{route('member.profile')}}">Profile</a></li>
+
+                <li><a href="{{route('member.profile')}}">Account Setting</a></li>
 
                 <!--<li><a class="has-arrow" href="javascript:void()" aria-expanded="false"></a>
                     <ul aria-expanded="false">

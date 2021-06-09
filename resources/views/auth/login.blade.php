@@ -27,7 +27,11 @@
                             <label for="first-name">
                             Email Address</label>
                             <input type="email" name="email" class="form-control" placeholder="Email Address">
-
+                            @error('email')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
 
 
@@ -35,6 +39,11 @@
                             <label for="first-name">
                             Password</label>
                             <input type="password" name="password" class="form-control" placeholder="Password">
+                            @error('password')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
                         </div>
 

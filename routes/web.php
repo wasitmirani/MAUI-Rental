@@ -45,6 +45,7 @@ Route::post('/search/places',[FrontEndController::class,'searchPlaces'])->name('
 Route::prefix('member')->name('member.')->group(function () {
         Route::get('/dashboard',[MemberController::class,'index'])->name('dashboard');
         Route::get('/tours',[MemberController::class,'getTours'])->name('tours');
+        Route::get('/bookings',[MemberController::class,'getBookings'])->name('bookings');
         Route::get('/upcoming/tours',[MemberController::class,'upcomingTours'])->name('upcoming.tours');
         Route::get('/profile',[MemberController::class,'profile'])->name('profile');
         Route::post('/update/profile',[MemberController::class,'updateProfile'])->name('update.profile');

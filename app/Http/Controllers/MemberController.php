@@ -13,13 +13,21 @@ class MemberController extends Controller
 
     public function index(){
 
-        return view('member.pages.index');
+        $totalTours = Tour::count();
+
+
+        return view('member.pages.index',compact('totalTours'));
     }
 
     public function getTours(){
         $tours = Tour::with('tourDetails')->paginate(10);
 
         return view('member.pages.tourlist',compact('tours'));
+    }
+    public function getBookings(){
+
+
+        return view('member.pages.bookings');
     }
     public function upcomingTours(){
         $tours = Tour::paginate(10);
