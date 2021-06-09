@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tour;
 use App\Models\User;
+use App\Models\BookingTour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,8 +27,8 @@ class MemberController extends Controller
     }
     public function getBookings(){
 
-
-        return view('member.pages.bookings');
+        $bookings = BookingTour::paginate(10);
+        return view('member.pages.bookings',compact('bookings'));
     }
     public function upcomingTours(){
         $tours = Tour::paginate(10);

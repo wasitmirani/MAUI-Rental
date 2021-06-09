@@ -26,13 +26,19 @@ class FrontEndController extends Controller
         return view('frontend.pages.index',compact('tours','packages', 'locations'));
     }
 
+    public function bookNow(){
+
+        return view('frontend.pages.booking');
+
+    }
+
     public function aboutUs(){
 
         return view('frontend.pages.aboutus');
     }
     public function packages(){
-
-        return view("frontend.pages.packages");
+        $packages=Package::join('tour_packages','tour_packages.package_id','=','packages.id')->select('tour_packages.price','packages.*')->latest()->with('tourPackages')->paginate(6);
+        return view("frontend.pages.packages",compact('packages'));
     }
 
     public function contactus(){
@@ -140,4 +146,6 @@ class FrontEndController extends Controller
     {
         //
     }
+
+
 }

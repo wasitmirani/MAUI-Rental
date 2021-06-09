@@ -68,16 +68,26 @@
                             </tr>
                         </thead>
                         <tbody>
+@foreach ($bookings as $booking)
+<tr>
+    <td><strong>01</strong></td>
+    <td>{{$booking->tour_id}}</td>
+    <td>{{$booking->package_id}}</td>
+    <td>{{$booking->booking_date}}</td>
+    <td>
+        @if ($booking->booking_status === 1)
+        <span class="badge light badge-warning">Pending</span>
+        @else
+        <span class="badge light badge-success">Approved</span>
+        @endif
 
-                            <tr>
-                                <td><strong>01</strong></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span class="badge light badge-success"></span></td>
+    </td>
 
 
-                            </tr>
+</tr>
+
+@endforeach
+
 
 
 

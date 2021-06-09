@@ -33,6 +33,7 @@
 							<li class="list-inline-item"><a href="{{route('packages')}}" >Packages</a></li>
 							<li class="list-inline-item"><a href="#" >Blog</a></li>
 							<li class="list-inline-item"><a href="{{route('contactus')}}" > Contact Us</a></li>
+
                                   <!-- Authentication Links -->
                         @guest
                         @if (Route::has('login'))

@@ -17,10 +17,11 @@ class CreateBookingToursTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('package_id')->nullable()->constrained('packages');
-            $table->foreignId('tour_id')->constrained('tour');
+            $table->foreignId('tour_id')->constrained('tours');
             $table->string('booking_date')->nullable();
             $table->string('start_booking_date')->nullable();
             $table->string('end_booking_date')->nullable();
+            $table->integer('booking_status')->default(1);
             $table->softDeletes();
             $table->timestamps();
         });
