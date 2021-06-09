@@ -27,6 +27,7 @@ Route::get('/',[FrontEndController::class,'index'])->name('index');
 Route::get('/about-us',[FrontEndController::class,'aboutUs'])->name('about');
 Route::get('/packages',[FrontEndController::class,'packages'])->name('packages');
 Route::get('/book',[FrontEndController::class,'bookNow'])->name('book.now');
+Route::get('/package/detail',[FrontEndController::class,'packageDetail'])->name('package.detail');
 
 Route::get('/contactus',[FrontEndController::class,'contactus'])->name('contactus');
 Route::post('/contactus',[FrontEndController::class,'sendMessage'])->name('send.message');

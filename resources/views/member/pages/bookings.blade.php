@@ -55,24 +55,24 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-responsive-md">
-                        <thead>
-                            <tr>
-                                <th class="width80"><strong>#</strong></th>
-                                <th><strong>Tour</strong></th>
-                                <th><strong>Package</strong></th>
-                                <th><strong>DATE</strong></th>
-                                <th><strong>STATUS</strong></th>
 
+                            <table id="example" class="display min-w850">
+                                <thead>
+                                    <tr>
+                                        <th class="width80"><strong>#</strong></th>
+                                        <th><strong>Tour</strong></th>
+                                        <th><strong>Package</strong></th>
+                                        <th><strong>DATE</strong></th>
+                                        <th><strong>STATUS</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                            </tr>
-                        </thead>
-                        <tbody>
 @foreach ($bookings as $booking)
 <tr>
     <td><strong>01</strong></td>
-    <td>{{$booking->tour_id}}</td>
-    <td>{{$booking->package_id}}</td>
+    <td>{{$booking->tour->name}}</td>
+    <td>{{$booking->package->name}}</td>
     <td>{{$booking->booking_date}}</td>
     <td>
         @if ($booking->booking_status === 1)
@@ -91,9 +91,17 @@
 
 
 
-
-                        </tbody>
-                    </table>
+</tbody>
+<tfoot>
+    <tr>
+        <th class="width80"><strong>#</strong></th>
+        <th><strong>Tour</strong></th>
+        <th><strong>Package</strong></th>
+        <th><strong>DATE</strong></th>
+        <th><strong>STATUS</strong></th>
+    </tr>
+</tfoot>
+</table>
                 </div>
             </div>
         </div>

@@ -138,42 +138,38 @@
 
                             </div>
                             <div class="card-body pb-0">
-                                <div class="d-flex mb-3 border-bottom justify-content-between flex-wrap align-items-center">
-                                    <div class="d-flex pb-3 align-items-center">
-
-                                        <div class="mr-3">
-                                            <p class="fs-14 mb-1">Tour Package</p>
-                                            <span class="text-black font-w500">Prime</span>
-                                        </div>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Bank</p>
-                                        <span class="text-black font-w500">ABC Bank</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Total Tours</p>
-                                        <span class="text-black font-w500">**** **** **** 2256</span>
-                                    </div>
-                                    <div class="mr-3 pb-3">
-                                        <p class="fs-14 mb-1">Namein Card</p>
-                                        <span class="text-black font-w500">Franklin Jr.</span>
-                                    </div>
-                                    <a href="transactions-details.html" class="fs-14 btn-link mr-3 pb-3">See Number</a>
-                                    <div class="dropdown pb-3">
-                                        <div class="btn-link" role="button" data-toggle="dropdown" aria-expanded="false">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 11.9999C10 13.1045 10.8954 13.9999 12 13.9999C13.1046 13.9999 14 13.1045 14 11.9999C14 10.8954 13.1046 9.99994 12 9.99994C10.8954 9.99994 10 10.8954 10 11.9999Z" fill="black"></path>
-                                                <path d="M10 4.00006C10 5.10463 10.8954 6.00006 12 6.00006C13.1046 6.00006 14 5.10463 14 4.00006C14 2.89549 13.1046 2.00006 12 2.00006C10.8954 2.00006 10 2.89549 10 4.00006Z" fill="black"></path>
-                                                <path d="M10 20C10 21.1046 10.8954 22 12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20Z" fill="black"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(24px, 25px, 0px);">
-                                            <a class="dropdown-item" href="javascript:void()">Delete</a>
-                                            <a class="dropdown-item" href="javascript:void()">Edit</a>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <table id="example" class="display min-w850">
+                                    <thead>
+                                        <tr>
+                                            <th>Package Name</th>
+                                            <th>Tour Name</th>
+                                            <th>Package Price</th>
+                                            <th>Booking Date</th>
+                                            <th>Start date</th>
+                                            <th>End Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Package Name</th>
+                                            <th>Tour Name</th>
+                                            <th>Package Price</th>
+                                            <th>Booking Date</th>
+                                            <th>Start date</th>
+                                            <th>End Date</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
                         </div>
                     </div>

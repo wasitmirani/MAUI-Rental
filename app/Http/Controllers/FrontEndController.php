@@ -31,6 +31,9 @@ class FrontEndController extends Controller
         return view('frontend.pages.booking');
 
     }
+    public function packageDetail(){
+        return view('frontend.pages.packagedetail');
+    }
 
     public function aboutUs(){
 
