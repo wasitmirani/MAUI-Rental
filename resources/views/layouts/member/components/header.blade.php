@@ -111,7 +111,12 @@
                                 @endif
                             </div>
 
+                            @if(Auth::user()->image == null)
+
                             <img src="images/profile/17.jpg" width="20" alt="">
+                            @else
+                            <img src="{{asset('admin/img/users/')}}{{'/'}}{{Auth::user()->image}}" width="20" alt="">
+                            @endif
 
 
                         </a>

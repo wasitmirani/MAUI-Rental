@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tour;
 use App\Models\User;
 use App\Models\BookingTour;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -47,19 +48,19 @@ class MemberController extends Controller
         $id = Auth::user()->id;
 
         $path = 'images/no-thumbnail.jpeg';
-        if($request->has('image')){
-          $extension = ".".$request->image->getClientOriginalExtension();
-          $name = basename($request->image->getClientOriginalName(), $extension).time();
-          $name = $name.$extension;
-          $path = $request->image->storeAs('images', $name, 'public');
-       }
+        $name = !empty($request->name) ? $request->name : config('app.name');
+        if ($request->hasfile('image')) {
+            $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
+
+            $request->image->move(public_path("/admin/img/users/"), $name);
+        }
 
 
         $update = User::where('id',$id)->update([
                 'name' => $request->name,
                 'email' => $request->email,
                 'phone' => $request->phone,
-                'image' => $path
+                'image' => $name
                 ]);
 
                 if($update){

@@ -6,7 +6,9 @@ use App\Models\Tour;
 use App\Models\Contact;
 use App\Models\Package;
 use App\Models\Location;
+use App\Models\BookingTour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class FrontEndController extends Controller
@@ -28,9 +30,43 @@ class FrontEndController extends Controller
 
     public function bookNow(){
 
-        return view('frontend.pages.booking');
+        $packages = Package::all();
+        $tours = Tour::all();
+
+        return view('frontend.pages.booking',compact('packages','tours'));
 
     }
+
+    public function booking(Request $request){
+
+
+            $created = BookingTour::create([
+                'package_id' => $request->package,
+                'tour_id' => $request->tour,
+                'start_booking_date' => $request->start_date,
+                'end_booking_date' => $request->end_date,
+                'booking_date' =>$request->booking_date,
+                'user_id' => Auth::user()->id
+
+            ]);
+
+            if($created){
+
+                return redirect()->back()->with('message','Your Booking Detail Submited Successfully');
+
+            }else{
+                return redirect()->back()->with('message','Failed To Submit Booking Detail');
+            }
+
+
+
+        }
+
+
+
+
+
+
     public function packageDetail(){
         return view('frontend.pages.packagedetail');
     }

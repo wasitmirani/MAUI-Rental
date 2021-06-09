@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class BookingTour extends Model
 {
+
+    protected $guarded = [];
   public function tour(){
       return $this->belongsTo(Tour::class,'tour_id','id');
   }

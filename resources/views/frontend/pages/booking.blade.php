@@ -8,6 +8,10 @@
                 <div class="row text-center">
                     <div class="col-lg-12">
                         <h2 class="heading-three">Book Now</h2>
+                        @if (Session::has('message'))
+                        <p class="alert alert-success">{{Session::get('message')}}</p>
+
+                        @endif
 
                     </div>
                 </div>
@@ -15,13 +19,14 @@
 <div class="alert alert-danger" role="alert">
     <p><b>Required Fields Missing!</b></p>
     <ul>
+
     @foreach($errors->all() as $error)
         <li>{{ $error }}</li>
     @endforeach
   </ul>
 </div>
 @endif
-                <form action="" method="post">
+                <form action="{{route('book')}}" method="post">
                 {{ csrf_field() }}
                     <div class="row">
                         <div class="col-lg-6">
@@ -30,30 +35,33 @@
                         <div class="col-lg-6">
                           <select class="form-control" name="package">
                               <option>Select Package</option>
-                              <option>1</option>
-                              <option>1</option>
-                              <option>1</option>
+                              @foreach ($packages as $package)
+                              <option value="{{$package->id}}">{{$package->name}}</option>
+                              @endforeach
+
 
                           </select>
                         </div>
                         <div class="col-lg-12">
-                            <select class="form-control" name="package">
+                            <select class="form-control" name="tour">
                                 <option>Select Tour</option>
-                                <option>1</option>
-                                <option>1</option>
-                                <option>1</option>
+                                @foreach ($tours as $tour)
+                                <option value="{{$tour->id}}">{{$tour->name}}</option>
+                                @endforeach
+
+
 
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <input class="form-control" name="start_name" type="date" placeholder="/">
+                            <input class="form-control" name="start_date" type="date" placeholder="/">
 
                         </div>
                         <div class="col-lg-6">
-                            <input class="form-control" name="end_name" type="date" placeholder="/">
+                            <input class="form-control" name="end_date" type="date" placeholder="/">
 
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <input class="form-control" name="booking_date" type="date" placeholder="Booking Date">
 
                         </div>
