@@ -16,6 +16,7 @@
     <link href="{{asset('/member/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{asset('/member/css/style.css')}}" rel="stylesheet">
 	<link href="{{asset('/member/vendor/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
+    <link href="{{asset('/member/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 
 
 </head>
@@ -137,6 +138,7 @@
     <script src="{{asset('/member/js/custom.min.js')}}"></script>
 	<script src="{{asset('/member/js/deznav-init.js')}}"></script>
 	<script src="{{asset('/member/vendor/owl-carousel/owl.carousel.js')}}"></script>
+
    <!-- Scripts -->
 
 	<!-- Chart piety plugin files -->
@@ -147,6 +149,9 @@
 
 	<!-- Dashboard 1 -->
 	<script src="{{asset('/member/js/dashboard/dashboard-1.js')}}"></script>
+-->
+<script src="{{asset('/member/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('/member/js/plugins-init/datatables.init.js')}}"></script>
 
 
 	<script>

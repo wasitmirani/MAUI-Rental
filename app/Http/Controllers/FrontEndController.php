@@ -28,6 +28,8 @@ class FrontEndController extends Controller
 
     public function bookNow(){
 
+        
+
         return view('frontend.pages.booking');
 
     }
@@ -134,6 +136,13 @@ class FrontEndController extends Controller
     public function searchPlaces(Request $request){
 
         return view('frontend.pages.search');
+
+
+    }
+
+    public function packageDetail(){
+
+        return view('frontend.pages.packagedetail');
 
 
     }

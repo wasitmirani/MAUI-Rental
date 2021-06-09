@@ -17,7 +17,8 @@
                     <div class="content">
                         <p><strong>$ {{$package->price}}</strong>7 days 6 nights</p>
                         <p class="para-one">{{$package->description}}.</p>
-                        <a href="{{route('book.now')}}" class="btn btn-business">BOOK Now <NOW></NOW> <i class="fas fa-arrow-right ml-3"></i></a>
+                        <a href="{{route('book.now')}}" class="btn btn-business">Book Now <NOW></NOW> <i class="fas fa-arrow-right ml-3"></i></a>
+                        <a href="{{route('package.detail')}}" class="btn btn-business">Detail <NOW></NOW> <i class="fas fa-arrow-right ml-3"></i></a>
                     </div>
                 </div>
             </div>

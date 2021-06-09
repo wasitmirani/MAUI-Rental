@@ -22,12 +22,13 @@ class MemberController extends Controller
 
     public function getTours(){
         $tours = Tour::with('tourDetails')->paginate(10);
-
+        
         return view('member.pages.tourlist',compact('tours'));
     }
     public function getBookings(){
 
-        $bookings = BookingTour::paginate(10);
+        $bookings = BookingTour::with('package')->with('tours')->with('user')->paginate(10);
+
         return view('member.pages.bookings',compact('bookings'));
     }
     public function upcomingTours(){

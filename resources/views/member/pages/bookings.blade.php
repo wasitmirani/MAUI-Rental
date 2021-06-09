@@ -55,46 +55,53 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-responsive-md">
+                    <table id="example" class="display min-w850">
                         <thead>
                             <tr>
-                                <th class="width80"><strong>#</strong></th>
-                                <th><strong>Tour</strong></th>
-                                <th><strong>Package</strong></th>
-                                <th><strong>DATE</strong></th>
-                                <th><strong>STATUS</strong></th>
+                                <th>Id</th>
 
+                                <th>Tour</th>
+                                <th>Package</th>
+                                <th>Booking Date</th>
+                                <th>Statsu</th>
 
                             </tr>
                         </thead>
                         <tbody>
-@foreach ($bookings as $booking)
-<tr>
-    <td><strong>01</strong></td>
-    <td>{{$booking->tour_id}}</td>
-    <td>{{$booking->package_id}}</td>
-    <td>{{$booking->booking_date}}</td>
-    <td>
-        @if ($booking->booking_status === 1)
-        <span class="badge light badge-warning">Pending</span>
-        @else
-        <span class="badge light badge-success">Approved</span>
-        @endif
+                            @foreach($bookings as $booking)
+                            <tr>
+                                <td>{{$booking->id}}</td>
+                                <td>{{$booking->tours->name}}</td>
+                                <td>{{$booking->package->name}}</td>
+                                <td>{{$booking->booking_date}}</td>
+                                <td>
+                                    @if ($booking->booking_status == 1)
+                                    <span class="badge badge-lg light badge-danger">Pending</span>
+                                    @else
+                                    <span class="badge badge-lg light badge-success">Approved</span>
+                                    @endif
 
-    </td>
+                                </td>
 
-
-</tr>
-
-@endforeach
-
-
-
-
+                            </tr>
+                            @endforeach
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
+
+                                <th>Tour</th>
+                                <th>Package</th>
+                                <th>Booking Date</th>
+                                <th>Statsu</th>
+
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
+
+
             </div>
         </div>
     </div>
