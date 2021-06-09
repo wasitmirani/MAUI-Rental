@@ -67,8 +67,10 @@ class FrontEndController extends Controller
 
 
 
-    public function packageDetail(){
-        return view('frontend.pages.packagedetail');
+    public function packageDetail($id){
+       $package = Package::with('tourPackages')->where('id',$id)->first();
+
+        return view('frontend.pages.packagedetail',compact('package'));
     }
 
     public function aboutUs(){
