@@ -98,5 +98,5 @@
                 </div>
 
             </section>
-            {{$tours->links()}}
+            {{$tours->links('pagination::bootstrap-4')}}
 

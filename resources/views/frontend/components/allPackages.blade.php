@@ -57,4 +57,4 @@
 
     </div>
 </section>
-{{$packages->links()}}
+{{$packages->links('pagination::bootstrap-4')}}
