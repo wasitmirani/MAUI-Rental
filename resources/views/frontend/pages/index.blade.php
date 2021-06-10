@@ -153,7 +153,7 @@
                 <h2 class="heading-three">Didn't find the service suite you! Need a custom service?</h2>
             </div>
             <div class="col-lg-4">
-                <a href="#" class="btn"><i class="fas fa-phone-alt"></i><span> Let`s Talk</span></a>
+                <a href="{{route('contactus')}}" class="btn"><i class="fas fa-phone-alt"></i><span> Let`s Talk</span></a>
             </div>
         </div>
     </div>
