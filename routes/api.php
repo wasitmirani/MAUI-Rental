@@ -38,8 +38,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::prefix('tour')->group(function () {
         Route::get('/tours',[TourController::class,"getTours"]);
         Route::post('/store',[TourController::class,'store']);
-        Route::post('/delete/{id}',[TourController::class,'delete']);
-        Route::patch('/update/{id}',[TourController::class,'update']);
+        Route::delete('/delete/{id}',[TourController::class,'delete']);
+        Route::post('/update/{id}',[TourController::class,'update']);
 
     });
 

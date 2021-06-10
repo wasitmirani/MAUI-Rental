@@ -43,12 +43,19 @@ class TourController extends Controller
     public function delete($id){
 
         $tour = Tour::where('id',$id)->first();
-        $deleted = $tour->delete();
+        if(!empty($tour)){
+            $deleted = $tour->delete();
 
-        if($deleted){
-            return response()->json('Record Deleted Successfully');
+            if($deleted){
+                return response()->json('Record Deleted Successfully');
+            }else{
+                return response()->json('Fialed To Delete Record');
+            }
+
+
+
         }else{
-            return response()->json('Fialed To Delete Record');
+            return response()->json('Record Not Found');
         }
 
 
@@ -59,29 +66,38 @@ class TourController extends Controller
     public function update(Request $request,$id){
 
 
-       
+
 
      $tour = Tour::where('id',$id)->first();
 
-     $name = !empty($request->name) ? $request->name : config('app.name');
-     if ($request->hasfile('file')) {
-         $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->file->extension();
+     if(!empty($tour)){
+        $name = !empty($request->name) ? $request->name : config('app.name');
+        if ($request->hasfile('file')) {
+            $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->file->extension();
 
-         $request->file->move(public_path("/admin/img/packages/"), $name);
-     }
+            $request->file->move(public_path("/admin/img/packages/"), $name);
+        }
 
-     $tour->name = $request->name;
-     $tour->description = $request->description;
-     $tour->thumbnail = $name;
+        $tour->name = $request->name;
+        $tour->description = $request->description;
+        $tour->thumbnail = $name;
 
-     $updated = $tour->save();
-     if($updated){
+        $updated = $tour->save();
+        if($updated){
 
-        return response()->json('Record Updated');
+           return response()->json('Record Updated');
+
+        }else{
+            return response()->json('Failed To Update Record');
+        }
 
      }else{
-         return response()->json('Failed To Update Record');
+
+        return response()->json('Record Not Found');
+
      }
+
+
 
 
 

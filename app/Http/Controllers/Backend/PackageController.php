@@ -56,8 +56,8 @@ class PackageController extends Controller
         }
     }
 
-    public function update(Request $request, id){
-        $package = Package::where()->first();
+    public function update(Request $request, $id){
+        $package = Package::where('id',$id)->first();
 
         $package->name = $request->name;
         $package->description = $request->description;
