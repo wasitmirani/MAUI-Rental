@@ -45,7 +45,7 @@ class PackageController extends Controller
     }
 
     public function delete($id){
-        dd($id);
+
         $package = Package::where('id'.$id)->first();
         $deleted = $package->delete();
 
@@ -69,7 +69,7 @@ class PackageController extends Controller
         }
         $package->name = $request->name;
         $package->description = $request->description;
-        $package->thmbnail = $name;
+        $package->thumbnail = $name;
 
         $updated = $package->save();
 
