@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class BookingController extends Controller
 {
     public function getBookings(){
-        $bookings = BookingTour::all();
+        $bookings = BookingTour::with('tour')->with('user')->with('package')->get();
         if(!empty($bookings)){
             return response()->json(['bookings'=>$bookings]);
         }else{
