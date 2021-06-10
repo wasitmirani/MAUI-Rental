@@ -45,6 +45,7 @@ class PackageController extends Controller
     }
 
     public function delete($id){
+        dd($id);
         $package = Package::where('id'.$id)->first();
         $deleted = $package->delete();
 
@@ -57,10 +58,18 @@ class PackageController extends Controller
     }
 
     public function update(Request $request, $id){
+
         $package = Package::where('id',$id)->first();
 
+        $name = !empty($request->name) ? $request->name : config('app.name');
+        if ($request->hasfile('file')) {
+            $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->file->extension();
+
+            $request->file->move(public_path("/admin/img/packages/"), $name);
+        }
         $package->name = $request->name;
         $package->description = $request->description;
+        $package->thmbnail = $name;
 
         $updated = $package->save();
 

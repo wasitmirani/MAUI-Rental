@@ -34,6 +34,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
         Route::get('/packages',[PackageController::class,"getPackages"]);
         Route::post('/store',[PackageController::class,'store']);
         Route::any("/upload/image",[PackageController::class,'uploadImg']);
+        Route::delete('/delete/{id}',[PackageController::class,'delete']);
+        Route::post('/update/{id}',[PackageController::class,'update']);
     });
 
     Route::prefix('tour')->group(function () {
