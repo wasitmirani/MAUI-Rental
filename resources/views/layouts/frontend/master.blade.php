@@ -27,12 +27,12 @@
 						<div class="logo"><img src="{{asset('/frontend/assets/images/logo.png')}}" class="img-fluid" alt=""></div>
 					</div>
 					<div class="col-lg-9 dis-flex-end">
-						<ul class="list-unstyled m-0">
-							<li class="list-inline-item"><a href="{{route('index')}}">Home</a></li>
-							<li class="list-inline-item"><a href="{{route('about')}}" >About Us</a></li>
-							<li class="list-inline-item"><a href="{{route('packages')}}" >Packages</a></li>
-							<li class="list-inline-item"><a href="#" >Blog</a></li>
-							<li class="list-inline-item"><a href="{{route('contactus')}}" > Contact Us</a></li>
+						<ul class="list-unstyled m-0" id="nav">
+							<li class="list-inline-item {{ request()->route()->getName()=="index" ? "active" : ''}}"><a href="{{route('index')}}" >Home</a></li>
+							<li class="list-inline-item {{ request()->route()->getName()=="about" ? "active" : ''}}"><a href="{{route('about')}}" >About Us</a></li>
+							<li class="list-inline-item {{ request()->route()->getName()=="packages" ? "active" : ''}}"><a href="{{route('packages')}}"  >Packages</a></li>
+							<li class="list-inline-item "><a href="#" >Blog</a></li>
+							<li class="list-inline-item {{ request()->route()->getName()=="contactus" ? "active" : ''}}"><a href="{{route('contactus')}}" > Contact Us</a></li>
 
                                   <!-- Authentication Links -->
                         @guest
@@ -90,5 +90,7 @@
 					<script>
 					AOS.init();
 					</script>
+                    <script>
+                   </script>
 				</body>
 			</html>

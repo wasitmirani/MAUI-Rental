@@ -22,7 +22,7 @@
                             <table id="example" class="display min-w850">
                                 <thead>
                                     <tr>
-                                        <th class="width80"><strong>#</strong></th>
+
                                         <th><strong>Tour</strong></th>
                                         <th><strong>Package</strong></th>
                                         <th><strong>DATE</strong></th>
@@ -33,7 +33,7 @@
 
 @foreach ($bookings as $booking)
 <tr>
-    <td><strong>01</strong></td>
+
     <td>{{$booking->tour->name}}</td>
     <td>{{$booking->package->name}}</td>
     <td>{{$booking->booking_date}}</td>
@@ -57,7 +57,7 @@
 </tbody>
 <tfoot>
     <tr>
-        <th class="width80"><strong>#</strong></th>
+
         <th><strong>Tour</strong></th>
         <th><strong>Package</strong></th>
         <th><strong>DATE</strong></th>

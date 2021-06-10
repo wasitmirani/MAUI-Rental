@@ -7,7 +7,7 @@ use App\Models\Tour;
 use App\Models\User;
 use App\Models\BookingTour;
 use Illuminate\Support\Str;
-
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +17,15 @@ class MemberController extends Controller
 
     public function index(){
         $id = Auth::user()->id;
-        $now = Carbon::now();
+
+        $dt = new DateTime();
+        $from = $date = date('Y-m-d');
+
+        $dt->modify( '+10 days' );
+        $to = $dt->format( 'dS M, Y (D)' );
+
+
+        $upcommings = BookingTour::with('tour')->with('package')->with('user')->whereBetween('start_booking_date', [$from, $to])->get();
 
         $totalBookings = BookingTour::where('user_id',$id)->count();
         $totalTours = Tour::count();
@@ -25,7 +33,7 @@ class MemberController extends Controller
 
 
 
-        return view('member.pages.index',compact('totalBookings','totalTours'));
+        return view('member.pages.index',compact('totalBookings','totalTours','upcommings'));
     }
 
     public function getTours(){
@@ -40,8 +48,18 @@ class MemberController extends Controller
         return view('member.pages.bookings',compact('bookings'));
     }
     public function upcomingTours(){
-        $tours = Tour::paginate(10);
-        return view('member.pages.upcoming',compact('tours'));
+        $dateObj = new DateTime();
+        $from = $date = date('Y-m-d');
+
+        $dateObj->modify( '+10 days' );
+        $to =  $dateObj->format( 'dS M, Y (D)' );
+
+
+        $upcommings = BookingTour::with('tour')->with('package')->with('user')->whereBetween('start_booking_date', [$from, $to])->get();
+
+
+        $tours = Tour::all();
+        return view('member.pages.upcoming',compact('upcommings'));
     }
 
     public function profile(){

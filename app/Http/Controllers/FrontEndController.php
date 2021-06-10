@@ -28,12 +28,16 @@ class FrontEndController extends Controller
         return view('frontend.pages.index',compact('tours','packages', 'locations'));
     }
 
-    public function bookNow(){
+    public function bookNow($id){
+
+
 
         $packages = Package::all();
+        $tour = Tour::where('id',$id)->first();
         $tours = Tour::all();
+        $locations = Location::all();
 
-        return view('frontend.pages.booking',compact('packages','tours'));
+        return view('frontend.pages.booking',compact('packages','tour','tours','locations'));
 
     }
 
@@ -46,7 +50,8 @@ class FrontEndController extends Controller
                 'start_booking_date' => $request->start_date,
                 'end_booking_date' => $request->end_date,
                 'booking_date' =>$request->booking_date,
-                'user_id' => Auth::user()->id
+                'user_id' => Auth::user()->id,
+                'location_id' => $request->location_id
 
             ]);
 
@@ -173,8 +178,17 @@ class FrontEndController extends Controller
     }
 
     public function searchPlaces(Request $request){
+        $location = $request->location;
+        $start = $request->start;
+        $end = $request->end;
 
-        return view('frontend.pages.search');
+        $results = BookingTour::with('tour')->with('package')->where(['location_id'=>$location])
+                      ->orwhere(['start_booking_date'=>$start])
+                      ->orwhere(['end_booking_date' => $end])
+                      ->get();
+
+
+        return view('frontend.pages.search',compact('results'));
 
 
     }

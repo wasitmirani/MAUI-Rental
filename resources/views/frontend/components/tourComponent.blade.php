@@ -56,7 +56,8 @@
                                     <img src="{{asset('frontend/assets/images/travel-3.jpg')}}" class="img-fluid" alt="">
                                     <h3>{{$tour->name}}</h3>
                                     <div class="overlay">
-                                        <a href="#" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
+                                        <a href="{{route('book.now',$tour->id)}}" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
+
                                     </div>
                                 </div>
                             </div>

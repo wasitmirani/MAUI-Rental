@@ -13,30 +13,49 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-responsive-md">
+                    <table id="example" class="display min-w850">
                         <thead>
+
                             <tr>
-                                <th class="width80"><strong>#</strong></th>
+
                                 <th><strong>Name</strong></th>
                                 <th><strong>Description</strong></th>
                                 <th><strong>DATE</strong></th>
                                 <th><strong>STATUS</strong></th>
-                                <th><strong>PRICE</strong></th>
+
 
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($upcommings as $upcomming)
                             <tr>
-                                <td><strong>01</strong></td>
-                                <td>Mr. Bobby</td>
-                                <td>Dr. Jackson</td>
-                                <td>01 August 2020</td>
-                                <td><span class="badge light badge-success">Successful</span></td>
-                                <td>$21.56</td>
+
+                                <td>{{$upcomming->tour->name}}</td>
+                                <td>{{$upcomming->tour->description}}</td>
+                                <td>{{$upcomming->booking_date}}</td>
+                                <td>
+                                @if ($upcomming->booking_status == 1)
+                                <span class="badge light badge-warning">Pending</span>
+                                @else
+                                <span class="badge light badge-success">Approved</span>
+                                @endif
+                                </td>
 
                             </tr>
+                            @endforeach
 
                         </tbody>
+                        <tfoot>
+                            <tr>
+
+
+                                <th><strong>Name</strong></th>
+                                <th><strong>Description</strong></th>
+                                <th><strong>DATE</strong></th>
+                                <th><strong>STATUS</strong></th>
+
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>

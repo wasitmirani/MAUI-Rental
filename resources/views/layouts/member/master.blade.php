@@ -47,9 +47,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="{{route('index')}}" class="brand-logo">
-                <img class="logo-abbr" src="{{asset('/member/images/logo.png')}}" alt="">
-                <img class="logo-compact" src="{{asset('/member/images/logo-text.png')}}" alt="">
-                <img class="brand-title" src="{{asset('/member/images/logo-text.png')}}" alt="">
+                <img class="logo-abbr" src="{{asset('/member/images/mauilogo.png')}}" alt="">
+                <img class="logo-compact" src="{{asset('/member/images/mauilogo1.png')}}" alt="">
+                <img class="brand-title" src="{{asset('/member/images/mauilogo1.png')}}" alt="">
             </a>
 
             <div class="nav-control">

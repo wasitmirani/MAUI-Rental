@@ -42,26 +42,43 @@
 
                           </select>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <select class="form-control" name="tour">
                                 <option>Select Tour</option>
-                                @foreach ($tours as $tour)
-                                <option value="{{$tour->id}}">{{$tour->name}}</option>
-                                @endforeach
+
+                                <option value="{{$tour->id}}" @if ($tour->id == $tour->id) {{'selected'}}
+
+                                @endif>{{$tour->name}}</option>
 
 
 
                             </select>
                         </div>
                         <div class="col-lg-6">
+                            <select class="form-control" name="location_id">
+                                <option>Select Location</option>
+                                @foreach ($locations as $location)
+                                <option value="{{$location->id}}">{{$location->name}}</option>
+                                @endforeach
+
+
+
+
+
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Start Date</label>
                             <input class="form-control" name="start_date" type="date" placeholder="/">
 
                         </div>
                         <div class="col-lg-6">
+                            <label>End Date</label>
                             <input class="form-control" name="end_date" type="date" placeholder="/">
 
                         </div>
                         <div class="col-lg-12">
+                            <label>Booking Date</label>
                             <input class="form-control" name="booking_date" type="date" placeholder="Booking Date">
 
                         </div>

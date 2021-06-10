@@ -26,7 +26,7 @@ use App\Http\Controllers\Backend\PackageController;
 Route::get('/',[FrontEndController::class,'index'])->name('index');
 Route::get('/about-us',[FrontEndController::class,'aboutUs'])->name('about');
 Route::get('/packages',[FrontEndController::class,'packages'])->name('packages');
-Route::get('/book',[FrontEndController::class,'bookNow'])->name('book.now');
+Route::get('/book/{id}',[FrontEndController::class,'bookNow'])->name('book.now');
 Route::post('/book',[FrontEndController::class,'booking'])->name('book');
 Route::get('/package/detail/{id}',[FrontEndController::class,'packageDetail'])->name('package.detail');
 
@@ -45,7 +45,7 @@ Route::post('/search/places',[FrontEndController::class,'searchPlaces'])->name('
 
 
 
-Route::prefix('member')->name('member.')->group(function () {
+Route::middleware(['auth'])->prefix('member')->name('member.')->group(function () {
         Route::get('/dashboard',[MemberController::class,'index'])->name('dashboard');
         Route::get('/tours',[MemberController::class,'getTours'])->name('tours');
         Route::get('/bookings',[MemberController::class,'getBookings'])->name('bookings');

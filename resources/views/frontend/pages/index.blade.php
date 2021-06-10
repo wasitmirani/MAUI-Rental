@@ -34,7 +34,7 @@
                             </select></div>
                         </li>
                         <li class="list-inline-item">
-                            <div class="date"><input type="text" class="" data-type="date" id="date-input" / placeholder="Return Date"></div>
+                            <div class="date"><input type="text" class="" name="start" data-type="date" id="start-input" / placeholder="Start Date"></div>
                             <div id="material-header-holder" style="display:none">
                                 <div class="ui-datepicker-material-header">
                                     <div class="ui-datepicker-material-day">
@@ -51,7 +51,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <div class="date"><input type="text" class="" data-type="date" id="date-input" / placeholder="Return Date"></div>
+                            <div class="date"><input type="text" name="end" class="" data-type="date" id="return-input" / placeholder="Return Date"></div>
                             <div id="material-header-holder" style="display:none">
                                 <div class="ui-datepicker-material-header">
                                     <div class="ui-datepicker-material-day">
@@ -67,9 +67,9 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="list-inline-item">
+                      <!--  <li class="list-inline-item">
                             <div class="time"><input type="text" class="" placeholder="Total Duration"></div>
-                        </li>
+                        </li>-->
                         <li class="list-inline-item">
                             <button type="submit" class="btn"><i class="fas fa-search"></i> Check Availability</button>
                         </li>

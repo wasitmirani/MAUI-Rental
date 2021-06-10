@@ -11,17 +11,17 @@
                     <div class="col-lg-6">
                         <h2>Quick Links</h2>
                         <ul class="list-unstyled">
-                            <li><a href="{{route('index')}}">Home</a></li>
-                            <li><a href="{{route('about')}}">About Us</a></li>
-                            <li><a href="{{route('packages')}}">Packages </a></li>
+                            <li><a href="{{route('index')}}"  class="{{ Request::is('/') ? 'active' : '' }}" >Home</a></li>
+                            <li><a href="{{route('about')}}"  class="{{ Request::is('/about-us') ? 'active' : '' }}">About Us</a></li>
+                            <li><a href="{{route('packages')}}"  class="{{ Request::is('/packages') ? 'active' : '' }}">Packages </a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="{{route('contactus')}}">Contact Us</a></li>
+                            <li><a href="{{route('contactus')}}"  class="{{ Request::is('/contactus') ? 'active' : '' }}">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
                         <h2>Contact Info</h2>
                         <ul class="list-unstyled">
-                            <li class="mb-4"><a href="#"><i class="fas fa-phone-alt"></i> 123-456-7890</a></li>
+                            <li class="mb-4"><a href="#" ><i class="fas fa-phone-alt"></i> 123-456-7890</a></li>
                             <li class="mb-4"><a href="#"><i class="far fa-envelope"></i> Info@company.com</a></li>
                             <li class="mb-4"><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Street Ipsum Usa</a></li>
                         </ul>

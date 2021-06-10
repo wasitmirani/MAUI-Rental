@@ -141,32 +141,36 @@
                                 <table id="example" class="display min-w850">
                                     <thead>
                                         <tr>
-                                            <th>Package Name</th>
-                                            <th>Tour Name</th>
-                                            <th>Package Price</th>
-                                            <th>Booking Date</th>
-                                            <th>Start date</th>
-                                            <th>End Date</th>
+                                            <th><strong>Name</strong></th>
+                                <th><strong>Description</strong></th>
+                                <th><strong>DATE</strong></th>
+                                <th><strong>STATUS</strong></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
+                                        @foreach($upcommings as $upcomming)
+                            <tr>
+
+                                <td>{{$upcomming->tour->name}}</td>
+                                <td>{{$upcomming->tour->description}}</td>
+                                <td>{{$upcomming->booking_date}}</td>
+                                <td>
+                                @if ($upcomming->booking_status == 1)
+                                <span class="badge light badge-warning">Pending</span>
+                                @else
+                                <span class="badge light badge-success">Approved</span>
+                                @endif
+                                </td>
+
+                            </tr>
+                            @endforeach
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Package Name</th>
-                                            <th>Tour Name</th>
-                                            <th>Package Price</th>
-                                            <th>Booking Date</th>
-                                            <th>Start date</th>
-                                            <th>End Date</th>
+                                            <th><strong>Name</strong></th>
+                                            <th><strong>Description</strong></th>
+                                            <th><strong>DATE</strong></th>
+                                            <th><strong>STATUS</strong></th>
                                         </tr>
                                     </tfoot>
                                 </table>

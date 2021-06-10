@@ -98,5 +98,10 @@
                 </div>
 
             </section>
-            {{$tours->links('pagination::bootstrap-4')}}
+            <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">{{$tours->links('pagination::bootstrap-4')}}</div>
+            <div class="col-4"></div>
+            </div>
+
 
