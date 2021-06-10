@@ -92,6 +92,7 @@ export default {
        async  getPackages(page=this.page_num){
             this.getUrlParams();
           await  axios.get("/package/packages?page=" + page + "&query=" + this.query,).then((res)=>{
+
                 this.packages=res.data.packages;
             });
         }

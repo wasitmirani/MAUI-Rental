@@ -1,44 +1,59 @@
 <template>
   <div>
+      <form action="" method="post">
       <div class="row clearfix">
-							<div class="col-lg-12 col-md-12 col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Employee ID *"> </div>
+					      <div class="col-lg-12 col-md-12 col-sm-12">
+							<div class="form-group">
+                                <label class="form-label">Name</label>
+								<input type="text" class="form-control" placeholder="Name *"> </div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="First Name *"> </div>
+                             <div class="col-lg-5 col-md-5 col-sm-12">
+							<div class="form-group">
+                                <!-- <label class="form-label">Thumbnail</label> -->
+								<ImgUpload v-on:filename="getFilename($event)" uploadurl="api/tour/upload/image" label="Upload Tour Imge"> </ImgUpload>
+                                </div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="col-lg-7 col-md-7 col-sm-12">
+
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Last Name"> </div>
-							</div>
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Email ID *"> </div>
-							</div>
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Mobile No"> </div>
+                                     <label class="form-label">Description</label>
+								    <textarea rows="5" class="form-control" placeholder="Here can be your description" value=""></textarea>
+                                </div>
 							</div>
 
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Username *"> </div>
-							</div>
-							<div class="col-md-4 col-sm-12">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Password"> </div>
-							</div>
-						
 
+
+
+                             <div class="col-md-8 col-sm-12">
+								<div class="row">
+
+								<button type="button" class="btn btn-primary">Submit</button>
+                                 <a class="nav-link" id="user-tab" data-toggle="tab" href="#user-list">
+								<button type="button" class="btn btn-danger">CLOSE</button>
+                                 </a>
+                                </div>
+                             </div>
 						</div>
+      </form>
   </div>
 </template>
 
 <script>
+import ImgUpload from "../components/ImgUpload";
 export default {
-
+    components:{
+        ImgUpload,
+    },
+    data(){
+        return {
+            thumbnail:null,
+        };
+    },
+    methods:{
+        getFilename(img){
+            this.thumbnail=img;
+        }
+    },
 }
 </script>
 

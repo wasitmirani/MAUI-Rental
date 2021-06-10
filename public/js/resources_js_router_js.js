@@ -35,6 +35,12 @@ var routes = [{
   },
   name: "users"
 }, {
+  path: "/tours",
+  component: function component() {
+    return setComponent("tours/Tours");
+  },
+  name: "tours"
+}, {
   path: "/packages",
   component: function component() {
     return setComponent("package/Packages");

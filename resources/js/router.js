@@ -19,6 +19,11 @@ const routes = [{
         name: "users",
     },
     {
+        path: "/tours",
+        component: () => setComponent("tours/Tours"),
+        name: "tours",
+    },
+    {
         path: "/packages",
         component: () => setComponent("package/Packages"),
         name: "packages",

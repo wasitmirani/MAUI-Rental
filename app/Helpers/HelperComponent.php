@@ -78,7 +78,7 @@ class HelperComponent {
                                     null,
                                     null,
                                     null,
-                                    "/users",
+                                    "/tours",
                                 ),
                                 setSubMenu(
                                     null,

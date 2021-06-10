@@ -76,7 +76,7 @@ export default {
         getUsers(page=this.page_num){
             this.getUrlParams();
             axios.get("/user/users?page=" + page + "&query=" + this.query,).then((res)=>{
-                console.log(res)
+                console.log(res.data)
                 this.users=res.data.users;
             });
         }
