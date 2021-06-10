@@ -20,103 +20,93 @@
 
 
 
-                <div class="owl-stage-outer"><div class="owl-stage" style="transition: all 0s ease 0s; width: 5027px; transform: translate3d(-1005px, 0px, 0px);"><div class="owl-item cloned" style="width: 472.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card2.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Purple Card</p>
-                                <h2 class="fs-36 text-white mb-4">$45,662</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
 
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                  <!--  <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>-->
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
+
+
+         <div class="row">
+            <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
+                            <span class="mr-3 bgl-primary text-primary">
+                                <!-- <i class="ti-user"></i> -->
+                                <svg id="icon-customers" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </span>
+                            <div class="media-body">
+                                <p class="mb-1">Your Tours</p>
+                                <h4 class="mb-0">{{$totalTours}}</h4>
+
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="owl-item cloned" style="width: 472.667px; margin-right: 49px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card3.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Green Card</p>
-                                <h2 class="fs-36 text-white mb-4">$23,511</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-
-                                    <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>
-                                    <div>
-                                        <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="owl-item cloned active" style="width: 413.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card4.png" alt="">
-                            <div class="card-info text-white">
-                                <p class="mb-1">Total Tours</p>
-                                <h2 class="fs-36 text-white mb-4">{{$totalTours}}</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
-
-                                   <!-- <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
-                                </div>
-                                <div class="d-flex">
-                                   <!-- <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>-->
-                                    <div>
-                                       <!-- <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-item active center" style="width: 413.667px; margin-right: 30px;"><div class="items">
-                        <div class="card-bx mb-0">
-                            <img src="images/card/card1.png" alt="">
-                            <div class="card-info text-white">
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
+                            <span class="mr-3 bgl-warning text-warning">
+                                <svg id="icon-orders" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </span>
+                            <div class="media-body">
                                 <p class="mb-1">Your Bookings</p>
-                                <h2 class="fs-36 text-white mb-4">{{$totalBookings}}</h2>
-                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                <h4 class="mb-0">{{$totalBookings}}</h4>
 
-                                   <!-- <h4 class="fs-20 text-white mb-0">**** **** **** 1234</h4>-->
-                                </div>
-                                <div class="d-flex">
-                                   <!-- <div class="mr-5">
-                                        <p class="fs-14 mb-1 op6">VALID THRU</p>
-                                        <span>08/21</span>
-                                    </div>-->
-                                    <div>
-                                       <!-- <p class="fs-14 mb-1 op6">CARD HOLDER</p>
-                                        <span>Franklin Jr.</span>-->
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body  p-4">
+                        <div class="media ai-icon">
+                            <span class="mr-3 bgl-danger text-danger">
+                                <svg id="icon-revenue" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </span>
+                            <div class="media-body">
+                                <p class="mb-1">Upcomming Bookings</p>
+                                <h4 class="mb-0">364.50</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
+                            <span class="mr-3 bgl-success text-success">
+                                <svg id="icon-database-widget" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </span>
+                            <div class="media-body">
+                                <p class="mb-1">Total Tours</p>
+                                <h4 class="mb-0">364.50</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
                 </div>
 
 
@@ -125,59 +115,60 @@
 
 
                     </div></div></div></div><div class="owl-nav"><div class="owl-prev"></div><div class="owl-next"></div></div><div class="owl-dots disabled"></div></div>
-            </div>
-            <div class="col-xl-12">
-                <div class="row">
                     <div class="col-xl-12">
-                        <div class="card">
-                            <div class="card-header d-sm-flex d-block border-0 pb-0">
-                                <div>
-                                    <h4 class="fs-20 text-black">Upcomimg Tours</h4>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header d-sm-flex d-block border-0 pb-0">
+                                        <div>
+                                            <h4 class="fs-20 text-black">Upcomimg Tours</h4>
 
+                                        </div>
+
+                                    </div>
+                                    <div class="card-body pb-0">
+                                        <table id="example" class="display min-w850">
+                                            <thead>
+                                                <tr>
+                                                    <th><strong>Name</strong></th>
+                                        <th><strong>Description</strong></th>
+                                        <th><strong>DATE</strong></th>
+                                        <th><strong>STATUS</strong></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($upcommings as $upcomming)
+                                    <tr>
+
+                                        <td>{{$upcomming->tour->name}}</td>
+                                        <td>{{$upcomming->tour->description}}</td>
+                                        <td>{{$upcomming->booking_date}}</td>
+                                        <td>
+                                        @if ($upcomming->booking_status == 1)
+                                        <span class="badge light badge-warning">Pending</span>
+                                        @else
+                                        <span class="badge light badge-success">Approved</span>
+                                        @endif
+                                        </td>
+
+                                    </tr>
+                                    @endforeach
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th><strong>Name</strong></th>
+                                                    <th><strong>Description</strong></th>
+                                                    <th><strong>DATE</strong></th>
+                                                    <th><strong>STATUS</strong></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
-
-                            </div>
-                            <div class="card-body pb-0">
-                                <table id="example" class="display min-w850">
-                                    <thead>
-                                        <tr>
-                                            <th><strong>Name</strong></th>
-                                <th><strong>Description</strong></th>
-                                <th><strong>DATE</strong></th>
-                                <th><strong>STATUS</strong></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($upcommings as $upcomming)
-                            <tr>
-
-                                <td>{{$upcomming->tour->name}}</td>
-                                <td>{{$upcomming->tour->description}}</td>
-                                <td>{{$upcomming->booking_date}}</td>
-                                <td>
-                                @if ($upcomming->booking_status == 1)
-                                <span class="badge light badge-warning">Pending</span>
-                                @else
-                                <span class="badge light badge-success">Approved</span>
-                                @endif
-                                </td>
-
-                            </tr>
-                            @endforeach
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th><strong>Name</strong></th>
-                                            <th><strong>Description</strong></th>
-                                            <th><strong>DATE</strong></th>
-                                            <th><strong>STATUS</strong></th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
                             </div>
                         </div>
                     </div>
-                </div>
+
             </div>
 
         </div>

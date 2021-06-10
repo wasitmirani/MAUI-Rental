@@ -72,11 +72,12 @@ class MemberController extends Controller
 
         $id = Auth::user()->id;
 
-        $path = 'images/no-thumbnail.jpeg';
-        $name = !empty($request->name) ? $request->name : config('app.name');
-        if ($request->hasfile('image')) {
-            $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
+        $name = 'no-thumbnail.png';
 
+        if ($request->hasfile('image')) {
+            $name = !empty($request->name) ? $request->name : config('app.name');
+
+            $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
             $request->image->move(public_path("/admin/img/users/"), $name);
         }
 

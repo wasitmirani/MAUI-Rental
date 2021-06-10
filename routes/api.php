@@ -8,6 +8,7 @@ use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PackageController;
+use App\Http\Controllers\Backend\TourController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
         Route::post('/store',[PackageController::class,'store']);
         Route::any("/upload/image",[PackageController::class,'uploadImg']);
     });
+
+    Route::prefix('tour')->group(function () {
+        Route::get('/tours',[TourController::class,"getTours"]);
+        Route::post('/store',[TourController::class,'store']);
+        Route::post('/delete/{id}',[TourController::class,'delete']);
+        Route::patch('/update/{id}',[TourController::class,'update']);
+
+    });
+
+

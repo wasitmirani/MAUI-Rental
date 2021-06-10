@@ -44,4 +44,34 @@ class PackageController extends Controller
         return response()->json($name);
     }
 
+    public function delete($id){
+        $package = Package::where('id'.$id)->first();
+        $deleted = $package->delete();
+
+        if($deleted){
+            return response()->json('Record deleted');
+
+        }else{
+            return response()->json('Failed To Delete Record');
+        }
+    }
+
+    public function update(Request $request, id){
+        $package = Package::where()->first();
+
+        $package->name = $request->name;
+        $package->description = $request->description;
+
+        $updated = $package->save();
+
+        if($updated)
+        {
+            return response()->json('Record Updated Successfully');
+
+        }else{
+            return response()->json('Failed To Record Data');
+        }
+
+    }
+
 }
