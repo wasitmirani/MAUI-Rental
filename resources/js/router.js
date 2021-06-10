@@ -28,6 +28,12 @@ const routes = [{
         component: () => setComponent("package/Packages"),
         name: "packages",
     },
+    {
+        path: "/bookings",
+        component: () => setComponent("booking/Bookings"),
+        name: "bookings",
+    },
+
 
 
 

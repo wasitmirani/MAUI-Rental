@@ -90,6 +90,14 @@ class HelperComponent {
                                 ),
                                 setSubMenu(
                                     null,
+                                    "Bookings",
+                                    null,
+                                    null,
+                                    null,
+                                    "/bookings",
+                                ),
+                                setSubMenu(
+                                    null,
                                     "Permissions",
                                     null,
                                     null,

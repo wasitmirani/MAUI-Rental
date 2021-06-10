@@ -46,6 +46,12 @@ var routes = [{
     return setComponent("package/Packages");
   },
   name: "packages"
+}, {
+  path: "/bookings",
+  component: function component() {
+    return setComponent("booking/Bookings");
+  },
+  name: "bookings"
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__.default({
   routes: routes,
