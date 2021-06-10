@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PackageController;
 use App\Http\Controllers\Backend\TourController;
+use App\Http\Controllers\Backend\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
         Route::post('/store',[TourController::class,'store']);
         Route::delete('/delete/{id}',[TourController::class,'delete']);
         Route::post('/update/{id}',[TourController::class,'update']);
+
+    });
+
+    Route::prefix('booking')->group(function(){
+        Route::get('/bookings',[BookingController::class,'getBookings']);
+        Route::post('/update/status/{id}',[BookingController::class,'updateStatus']);
+
 
     });
 
