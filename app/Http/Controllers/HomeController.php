@@ -27,7 +27,7 @@ class HomeController extends Controller
         // if(Auth::user()->role_id == 1){
             $user=User::where('id',1)->first();
             Auth::loginUsingId( $user->id);
-            return redirect()->route('member.dashboard');
+            return view('member.pages.index');
 
 
     // }else{
