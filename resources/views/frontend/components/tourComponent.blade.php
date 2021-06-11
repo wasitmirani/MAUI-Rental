@@ -59,6 +59,7 @@
                                         <a href="{{route('book.now',$tour->id)}}" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
 
                                     </div>
+
                                 </div>
                             </div>
                         @endforeach

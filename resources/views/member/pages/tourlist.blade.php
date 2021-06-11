@@ -20,20 +20,21 @@
                                 <th><strong>Name</strong></th>
                                 <th><strong>Description</strong></th>
                                 <th><strong>DATE</strong></th>
-                                <th><strong>STATUS</strong></th>
+
                                 <th><strong>PRICE</strong></th>
                             </tr>
                         </thead>
                         <tbody>
 
                             @foreach ($tours as $tour)
+
                             <tr>
 
                                 <td>{{$tour->name}}</td>
                                 <td>{{$tour->description}}</td>
                                 <td>{{$tour->created_at}}</td>
-                                <td><span class="badge light badge-success">{{$tour->name}}</span></td>
-                                <td>$21.56</td>
+                                <td></td>
+
 
                             </tr>
 

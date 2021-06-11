@@ -52,7 +52,13 @@
 @endforeach
 
 
+                            </tr>
+                            @endforeach
 
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
 
 </tbody>
 <tfoot>
@@ -66,6 +72,8 @@
 </tfoot>
 </table>
                 </div>
+
+
             </div>
         </div>
     </div>

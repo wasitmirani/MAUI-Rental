@@ -31,6 +31,7 @@ Route::post('/book',[FrontEndController::class,'booking'])->name('book');
 Route::get('/package/detail/{id}',[FrontEndController::class,'packageDetail'])->name('package.detail');
 
 Route::get('/contactus',[FrontEndController::class,'contactus'])->name('contactus');
+Route::get('/package/detail',[FrontEndController::class,'packageDetail'])->name('package.detail');
 Route::post('/contactus',[FrontEndController::class,'sendMessage'])->name('send.message');
 Route::get('/all/packages',[TourPackageController::class,'index'])->name('all.packages');
 Route::get('/all/tours',[TourController::class,'index'])->name('all.tours');

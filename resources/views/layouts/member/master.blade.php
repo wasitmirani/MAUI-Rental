@@ -138,6 +138,7 @@
     <script src="{{asset('/member/js/custom.min.js')}}"></script>
 	<script src="{{asset('/member/js/deznav-init.js')}}"></script>
 	<script src="{{asset('/member/vendor/owl-carousel/owl.carousel.js')}}"></script>
+
    <!-- Scripts -->
 
 	<!-- Chart piety plugin files -->

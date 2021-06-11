@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\BookingTour;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Tour extends Model
 {
@@ -15,7 +16,9 @@ class Tour extends Model
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
 public function tourDetails(){
-        return  $this->belongsTo(User::class, 'tour_id', 'id');
+        return  $this->hasOne(TourPackage::class,'tour_id','id');
     }
+
+
 
 }
