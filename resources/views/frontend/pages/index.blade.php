@@ -90,14 +90,18 @@
 
 
             {{-- Tour Section  --}}
-
+            @if(!empty($tours))
             @component('frontend.components.tourComponent',['tours'=>$tours])
 
             @endcomponent
+            @endif
             <!-- Packages -->
+        
+            @if(count($packages)>0)
             @component('frontend.components.packagesComponent',['packages'=>$packages])
 
             @endcomponent
+            @endif
             <!-- Packages -->
             <!-- Testimonials -->
             <section class="testimonials" style="background-image: url(frontend/assets/images/testimonial-bg.jpg)">
