@@ -40,7 +40,7 @@
 <script>
 import nametag from "../components/NameTag";
 export default {
-    props:['Tours','getTours'],
+    props:['tours','getTours'],
     components:{
         nametag
     },

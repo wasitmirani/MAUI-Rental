@@ -26,7 +26,7 @@
 							<form>
 								<div class="input-group">
                                     <SearchInput
-                                    label="Search Packages"
+                                    label="Search Tours"
                                     :apiUrl="'/tour/tours?page=' + this.page_num"
                                     v-on:query="isquery($event)"
                                     v-on:isLoading="isLoading($event)"
@@ -39,7 +39,7 @@
 					</div>
 					<div class="card-body">
 					  <!-- Packages Table -->
-                      <TourTable :packages="packages"  :getPackages="getPackages"></TourTable>
+                      <TourTable :tours="tours"  :getTours="getTours"></TourTable>
 					</div>
 				</div>
 			</div>
@@ -69,7 +69,7 @@ export default {
     },
     data(){
     return{
-        tours:{},
+        tours:[],
         query:"",
         page_num: 1,
     };
@@ -90,9 +90,10 @@ export default {
          },
        async  getTours(page=this.page_num){
             this.getUrlParams();
-          await  axios.get("/tour/tours?page=" + page + "&query=" + this.query,).then((res)=>{
 
-                this.tours=res.data.tours;
+          await  axios.get("/tour/tours?page=" + page + "&query=" + this.query,).then((res)=>{
+              console.log(res.data.tuors)
+                this.tours=res.data.tuors;
             });
         }
     },

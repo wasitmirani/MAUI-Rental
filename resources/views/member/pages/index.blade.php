@@ -36,7 +36,7 @@
                                 </svg>
                             </span>
                             <div class="media-body">
-                                <p class="mb-1">Your Tours</p>
+                                <p class="mb-1">Total Tours</p>
                                 <h4 class="mb-0">{{$totalTours}}</h4>
 
                             </div>
@@ -58,7 +58,7 @@
                                 </svg>
                             </span>
                             <div class="media-body">
-                                <p class="mb-1">Your Bookings</p>
+                                <p class="mb-1">Total Bookings</p>
                                 <h4 class="mb-0">{{$totalBookings}}</h4>
 
                             </div>
@@ -77,8 +77,8 @@
                                 </svg>
                             </span>
                             <div class="media-body">
-                                <p class="mb-1">Upcomming Bookings</p>
-                                <h4 class="mb-0">364.50</h4>
+                                <p class="mb-1">Total Pending</p>
+                                <h4 class="mb-0">{{ $totalPending}}</h4>
 
                             </div>
                         </div>
@@ -97,8 +97,8 @@
                                 </svg>
                             </span>
                             <div class="media-body">
-                                <p class="mb-1">Total Tours</p>
-                                <h4 class="mb-0">364.50</h4>
+                                <p class="mb-1">Total Approved</p>
+                                <h4 class="mb-0"> {{$totalApproved}}</h4>
 
                             </div>
                         </div>

@@ -28,12 +28,14 @@ class MemberController extends Controller
         $upcommings = BookingTour::with('tour')->with('package')->with('user')->whereBetween('start_booking_date', [$from, $to])->get();
 
         $totalBookings = BookingTour::where('user_id',$id)->count();
+        $totalPending = BookingTour::where([['user_id','=',$id],['booking_status','=',1]])->count();
+        $totalApproved = BookingTour::where([['user_id','=',$id],['booking_status','=',2]])->count();
         $totalTours = Tour::count();
       //  $upcoming = BookingTour::whereBetween('start_booking_date',[$now, ])
 
 
 
-        return view('member.pages.index',compact('totalBookings','totalTours','upcommings'));
+        return view('member.pages.index',compact('totalBookings','totalTours','upcommings','totalPending','totalApproved'));
     }
 
     public function getTours(){

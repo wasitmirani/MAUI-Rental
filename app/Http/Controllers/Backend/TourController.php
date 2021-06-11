@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Tour;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -11,8 +12,8 @@ class TourController extends Controller
 
     public function getTours(){
 
-        $tutors = Tour::all();
-        return response()->json(['tutors'=>$tutors]);
+        $tuors = Tour::all();
+        return response()->json(['tuors'=>$tuors]);
     }
 
     public function store(Request $request){

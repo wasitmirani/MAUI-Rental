@@ -51,7 +51,7 @@ var routes = [{
   component: function component() {
     return setComponent("booking/Bookings");
   },
-  name: "bookings"
+  name: "booking"
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__.default({
   routes: routes,

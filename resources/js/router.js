@@ -31,7 +31,7 @@ const routes = [{
     {
         path: "/bookings",
         component: () => setComponent("booking/Bookings"),
-        name: "bookings",
+        name: "booking",
     },
 
 

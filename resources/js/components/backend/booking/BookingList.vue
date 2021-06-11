@@ -4,47 +4,47 @@
 							<table class="table table-striped table-hover table-vcenter text-nowrap mb-0">
 								<thead>
 									<tr>
-										<th class="w60">Tour Name</th>
-										<th>Package Name></th>
-										<th>User Name</th>
+										<th class="w60">Name</th>
+										<th>Description</th>
+										<th>Tour</th>
 
-										<th>Created Date</th>
-										<!-- <th>Role</th> -->
+										<th>Booking Date</th>
+										<th>User</th>
 										<th class="w100">Action</th>
 									</tr>
 								</thead>
 								<tbody>
 
 
-									<tr v-for="item in bookings.data" :key="item.id">
-										<td> <nametag :name="item.name"></nametag> </td>
+									<tr v-for="booking in bookings.data" :key="booking.id">
+										<td>  </td>
 										<td>
-											<h6 class="mb-0">{{item.name}}</h6> <span></span> </td>
-										<!-- <td><span class="tag tag-success">HR Admin</span></td> -->
+										 </td>
+										<td><span class="tag tag-success">HR Admin</span></td>
 										<td></td>
-                                        <td>{{item.created_at | created_date}}</td>
-										<!-- <td>HR</td> -->
+										<td>HR</td>
 										<td>
-											<a  class="btn btn-icon" title="Edit"  data-toggle="tab" href="#user-add"><i class="fa fa-edit"></i></a>
+											<button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
 											<button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
 										</td>
 									</tr>
 								</tbody>
 							</table>
                             <hr>
-                            <pagination :data="bookings" @pagination-change-page="getBookings"></pagination>
+
 						</div>
   </div>
 </template>
 
 <script>
-import nametag from "../components/NameTag";
+Vue.filter('avatar_name',function(value){
+    if(value){
+        return value.slice(0,2);
+    }
+    return value;
+});
 export default {
-    props:['bookings','getBookings'],
-    components:{
-        nametag
-    },
-
+    props:['Bookings','getBookings'],
 }
 </script>
 
