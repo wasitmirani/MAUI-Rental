@@ -24,14 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(Auth::user()->role_id == 1){
+        // if(Auth::user()->role_id == 1){
+            $user=User::where('id',1)->first();
+            Auth::loginUsingId( $user->id);
             return redirect()->route('member.dashboard');
 
 
-    }else{
-        return redirect()->route('dashboard');
+    // }else{
+    //     return redirect()->route('dashboard');
 
-    }
+    // }
 
         // return view('home');
     }

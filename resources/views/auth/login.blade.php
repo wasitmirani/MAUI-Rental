@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="col-lg-5 dis-flex">
-                <form action="{{route('login')}}" method="POST">
+                <form action="{{route('home')}}" method="POST">
                     @csrf
                     <div class="row">
 
