@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 dis-flex">
-                    <form action="{{route('home')}}" method="POST">
+                    <form action="{{route('home')}}" method="get">
                     @csrf
                         <div class="row">
                             <div class="col-12">
