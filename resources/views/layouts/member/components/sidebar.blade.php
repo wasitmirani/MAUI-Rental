@@ -11,8 +11,7 @@
                     <span class="nav-text">My Bookings</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{route('member.bookings')}}">Bookings</a></li>
-                    <li><a href="{{route('member.tours')}}">Tours</a></li>
+                    <li><a href="{{route('member.bookings')}}">My Tours</a></li>
 
                     <li><a href="{{route('member.upcoming.tours')}}">Upcomming Tours</a></li>
 
