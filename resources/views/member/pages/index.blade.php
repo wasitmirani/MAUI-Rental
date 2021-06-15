@@ -37,7 +37,7 @@
                             </span>
                             <div class="media-body">
                                 <p class="mb-1">Total Tours</p>
-                                <h4 class="mb-0">{{$totalTours}}</h4>
+                                <h4 class="mb-0">{{!empty($total_tours) ? $total_tours : 0}}</h4>
 
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                             </span>
                             <div class="media-body">
                                 <p class="mb-1">Total Bookings</p>
-                                <h4 class="mb-0">{{$totalBookings}}</h4>
+                                <h4 class="mb-0">{{!empty($total_bookings) ? $total_bookings : 0}}</h4>
 
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                             </span>
                             <div class="media-body">
                                 <p class="mb-1">Total Pending</p>
-                                <h4 class="mb-0">{{ $totalPending}}</h4>
+                                <h4 class="mb-0">{{ !empty($total_pending) ? $total_pending : 0}}</h4>
 
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                             </span>
                             <div class="media-body">
                                 <p class="mb-1">Total Approved</p>
-                                <h4 class="mb-0"> {{$totalApproved}}</h4>
+                                <h4 class="mb-0"> {{!empty($total_approved) ? $total_approved : 0 }}</h4>
 
                             </div>
                         </div>
@@ -137,6 +137,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+
                                                 @foreach($upcommings as $upcomming)
                                     <tr>
 
