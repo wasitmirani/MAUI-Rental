@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 dis-flex">
-                    <form action="{{route('home')}}" method="post">
+                    <form action="{{route('register')}}" method="post">
                     @csrf
                         <div class="row">
                             <div class="col-12">
@@ -91,6 +91,7 @@
                                 <button type="submit" class="btn btn-business w-100">Register</button>
                             </div>
                             <div class="col-12 text-center mt-3">
+                              
                                 <a class="btn" href="#">Or Continue With <img src="{{asset('frontend/assets/images/google.png')}}" class="img-fluid ml-2"></a>
                             </div>
                         </div>

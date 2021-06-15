@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -25,17 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // if(Auth::user()->role_id == 1){
-            $user=User::where('id',1)->first();
-            Auth::loginUsingId( $user->id);
-            return view('member.pages.index');
+        if(Auth::user()->role_id == 1){
+            return redirect()->route('member.dashboard');
+
+    }else{
+        return redirect()->route('dashboard');
+
+    }
 
 
-    // }else{
-    //     return redirect()->route('dashboard');
-
-    // }
-
-        // return view('home');
     }
 }
