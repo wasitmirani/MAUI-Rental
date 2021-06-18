@@ -15,6 +15,9 @@ class MemberController extends Controller
 {
     //
 
+    public function customerLogin(Request $request){
+        dd($request->all());
+    }
     public function index(){
 
         $id = Auth::user()->id;

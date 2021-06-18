@@ -55,3 +55,5 @@ Route::middleware(['auth'])->prefix('member')->name('member.')->group(function (
         Route::post('/update/profile',[MemberController::class,'updateProfile'])->name('update.profile');
 
 });
+
+Route::post('/customer/login',[MemberController::class,'customerLogin'])->name('customer.login');
