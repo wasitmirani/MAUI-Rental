@@ -4,62 +4,30 @@
 
 @section('content')
 
-  <!--Register Form-->
-  <section class="main-register">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="img-box">
-                    <img src="{{asset('/frontend/assets/images/form-sdie-img.jpg')}}" class="img-fluid" alt="">
-                    <div class="overlay">
-                        <h3>Welcome To</h3>
-                        <h2>Maui Rental <strong>Locators</strong> </h2>
-                        <p>Grursus mal suada faci lisis Lorem ipsum dolarorit more ametion consectetur elit. Vesti at bulum nec odio aea the dumm ipsumm ipsum that dolocons rsus mal suada and fadolorit to the dummy consectetur elit the Lorem Ipsum genera.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 dis-flex">
-                <form action="{{route('login')}}" method="post">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="row">
+<form method="POST" action="{{ route('login') }}">
+    @csrf
 
-                        <div class="col-12">
-                            <label for="first-name">
-                            Email Address</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email Address">
-                            @error('email')
-                            <span class="text-danger" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                        </div>
-
-
-                        <div class="col-12">
-                            <label for="first-name">
-                            Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
-                            @error('password')
-                            <span class="text-danger" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
-                        </div>
-
-                        <div class="col-12 mt-5">
-                            <button type="submit" class="btn btn-business w-100">Login</button>
-                        </div>
-                          <div class="col-12 text-center mt-3">
-                            <a class="btn" href="{{route('register')}}">Register New Account </a>
-                            <a class="btn" href="#">Or Continue With <img src="{{asset('/frontend/assets/images/google.png')}}" class="img-fluid ml-2"></a>
-                        </div>
-                    </div>
-                </form>
+    <div class="form-group">
+        <label class="mb-1 text-white"><strong>Email</strong></label>
+        <input type="email" class="form-control" required name="email">
+    </div>
+    <div class="form-group">
+        <label class="mb-1 text-white"><strong>Password</strong></label>
+        <input type="password" class="form-control" name="password" required>
+    </div>
+    <div class="form-row d-flex justify-content-between mt-4 mb-2">
+        <div class="form-group">
+           <div class="custom-control custom-checkbox ml-1 text-white">
+                <input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
+                <label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
             </div>
         </div>
+        <div class="form-group">
+            <a class="text-white" href="page-forgot-password.html">Forgot Password?</a>
+        </div>
     </div>
-</section>
-<!--Register Form-->
-
+    <div class="text-center">
+        <button type="submit" class="btn bg-white text-primary btn-block">Sign Me In</button>
+    </div>
+</form>
 @endsection

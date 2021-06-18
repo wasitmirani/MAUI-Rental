@@ -33,6 +33,6 @@ class HomeController extends Controller
 
     }
 
-
+    dd("jj");
     }
 }
