@@ -52,23 +52,14 @@
 @endforeach
 
 
-                            </tr>
-                            @endforeach
-
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Id</th>
-
 </tbody>
 <tfoot>
-    <tr>
-
-        <th><strong>Tour</strong></th>
-        <th><strong>Package</strong></th>
-        <th><strong>DATE</strong></th>
-        <th><strong>STATUS</strong></th>
-    </tr>
+        <tr>
+            <th><strong>Tour</strong></th>
+            <th><strong>Package</strong></th>
+            <th><strong>DATE</strong></th>
+            <th><strong>STATUS</strong></th>
+        </tr>
 </tfoot>
 </table>
                 </div>
